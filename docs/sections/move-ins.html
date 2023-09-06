@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>HRS Dashboard - Move-In Charts &amp; Details</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../styles/graphics/echo-favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="../site_libs/proj4js-2.3.15/proj4.js"></script>
+<link href="../site_libs/highcharts-9.3.1/css/motion.css" rel="stylesheet">
+<script src="../site_libs/highcharts-9.3.1/highcharts.js"></script>
+<script src="../site_libs/highcharts-9.3.1/highcharts-3d.js"></script>
+<script src="../site_libs/highcharts-9.3.1/highcharts-more.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/stock.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/map.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/data.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/exporting.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/offline-exporting.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/drilldown.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/item-series.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/overlapping-datalabels.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/annotations.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/export-data.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/funnel.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/heatmap.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/treemap.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/sankey.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/dependency-wheel.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/organization.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/solid-gauge.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/streamgraph.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/sunburst.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/vector.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/wordcloud.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/xrange.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/tilemap.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/venn.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/gantt.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/timeline.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/parallel-coordinates.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/bullet.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/coloraxis.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/dumbbell.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/lollipop.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/series-label.js"></script>
+<script src="../site_libs/highcharts-9.3.1/plugins/motion.js"></script>
+<script src="../site_libs/highcharts-9.3.1/custom/reset.js"></script>
+<script src="../site_libs/highcharts-9.3.1/modules/boost.js"></script>
+<script src="../site_libs/highchart-binding-0.9.4/highchart.js"></script>
+
+
+<link rel="stylesheet" href="../styles/styles.css">
+<meta property="og:title" content="HRS Dashboard - Move-In Charts &amp; Details">
+<meta property="og:description" content="This dashboard allows users to explore key Austin / Travis County Homelessness Response System (HRS) measures and metrics to gain a better understanding of the current and historical trends in local homelessness services data.">
+<meta property="og:image" content="https://www.austinecho.org/wp-content/uploads/2023/06/preview-square.jpg">
+<meta property="og:site-name" content="HRS Dashboard | by ECHO">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:title" content="HRS Dashboard | by ECHO">
+<meta name="twitter:description" content="This dashboard allows users to explore key Austin / Travis County Homelessness Response System (HRS) measures and metrics to gain a better understanding of the current and historical trends in local homelessness services data.">
+<meta name="twitter:image" content="https://www.austinecho.org/wp-content/uploads/2023/06/preview-square.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">HRS Dashboard</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target=""><i class="bi bi-house-fill" role="img">
+</i> 
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sections/toc.html" rel="" target=""><i class="bi bi-list-task" role="img">
+</i> 
+ <span class="menu-text">Table of Contents</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sections/system-capacity.html" rel="" target=""><i class="bi bi-pie-chart-fill" role="img">
+</i> 
+ <span class="menu-text">System Capacity</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../sections/move-ins.html" rel="" target="" aria-current="page"><i class="bi bi-bar-chart-line-fill" role="img">
+</i> 
+ <span class="menu-text">Move-Ins</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sections/people.html" rel="" target=""><i class="bi bi-people-fill" role="img">
+</i> 
+ <span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sections/entries-returns.html" rel="" target=""><i class="bi bi-signpost-fill" role="img">
+</i> 
+ <span class="menu-text">Entries &amp; Returns</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sections/system-flow.html" rel="" target=""><i class="bi bi-arrow-repeat" role="img">
+</i> 
+ <span class="menu-text">System Flow</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sections/more-info.html" rel="" target=""><i class="bi bi-info-circle-fill" role="img">
+</i> 
+ <span class="menu-text">More Info</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-hand-thumbs-up-fill" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-hand-thumbs-up-fill" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-hand-thumbs-up-fill">    
+        <li>
+    <a class="dropdown-item" href="https://www.linkedin.com/company/ending-community-homelessness-coalition" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="dropdown-text">LinkedIn</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://twitter.com/atxecho" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="dropdown-text">Twitter</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.facebook.com/atxecho" rel="" target=""><i class="bi bi-facebook" role="img">
+</i> 
+ <span class="dropdown-text">Facebook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.instagram.com/atx_echo" rel="" target=""><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="dropdown-text">Instagram</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-envelope-fill" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+      <i class="bi bi-envelope-fill" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-envelope-fill">    
+        <li>
+    <a class="dropdown-item" href="https://www.austinecho.org/hmis/how-to-request-data/" rel="" target=""><i class="bi bi-graph-up-arrow" role="img">
+</i> 
+ <span class="dropdown-text">Data Requests</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.austinecho.org/got-a-question/" rel="" target=""><i class="bi bi-question-circle-fill" role="img">
+</i> 
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.austinecho.org/got-a-question/#section-media-requests" rel="" target=""><i class="bi bi-play-btn-fill" role="img">
+</i> 
+ <span class="dropdown-text">Media Requests</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On This Page:</h2>
+   
+  <ul>
+  <li><a href="#moveins-by-program-type" id="toc-moveins-by-program-type" class="nav-link active" data-scroll-target="#moveins-by-program-type"><strong>Permanent Housing Move-Ins by Program Type</strong></a></li>
+  <li><a href="#moveins-by-race-ethnicity" id="toc-moveins-by-race-ethnicity" class="nav-link" data-scroll-target="#moveins-by-race-ethnicity"><strong>Permanent Housing Move-Ins by Race/Ethnicity</strong></a></li>
+  <li><a href="#annual-moveins-by-program-type" id="toc-annual-moveins-by-program-type" class="nav-link" data-scroll-target="#annual-moveins-by-program-type"><strong>People Housed Annually by Program Type</strong></a></li>
+  <li><a href="#previous-year-moveins-by-race-ethnicity" id="toc-previous-year-moveins-by-race-ethnicity" class="nav-link" data-scroll-target="#previous-year-moveins-by-race-ethnicity"><strong>People Housed in 2022 by Race/Ethnicity</strong></a></li>
+  <li><a href="#toggle-focus-mode" id="toc-toggle-focus-mode" class="nav-link" data-scroll-target="#toggle-focus-mode"><button class="echobtn2" id="fullscreenbutton" onclick="toggleFullscreen(); return false">Toggle Focus Mode &nbsp; <i class="bi bi-arrows-fullscreen"></i></button></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Move-In Charts &amp; Details</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="moveins-by-program-type" class="level2">
+<h2 class="anchored" data-anchor-id="moveins-by-program-type"><strong>Permanent Housing Move-Ins by Program Type</strong></h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6576aaf21b5b3862a0f8" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-6576aaf21b5b3862a0f8">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Number of People"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"Permanent Supportive Housing","data":[{"Month":"2019-01-01","Type":"Permanent Supportive Housing","Number of People":16,"x":1546300800000,"y":16},{"Month":"2019-02-01","Type":"Permanent Supportive Housing","Number of People":22,"x":1548979200000,"y":22},{"Month":"2019-03-01","Type":"Permanent Supportive Housing","Number of People":10,"x":1551398400000,"y":10},{"Month":"2019-04-01","Type":"Permanent Supportive Housing","Number of People":9,"x":1554076800000,"y":9},{"Month":"2019-05-01","Type":"Permanent Supportive Housing","Number of People":20,"x":1556668800000,"y":20},{"Month":"2019-06-01","Type":"Permanent Supportive Housing","Number of People":15,"x":1559347200000,"y":15},{"Month":"2019-07-01","Type":"Permanent Supportive Housing","Number of People":12,"x":1561939200000,"y":12},{"Month":"2019-08-01","Type":"Permanent Supportive Housing","Number of People":12,"x":1564617600000,"y":12},{"Month":"2019-09-01","Type":"Permanent Supportive Housing","Number of People":3,"x":1567296000000,"y":3},{"Month":"2019-10-01","Type":"Permanent Supportive Housing","Number of People":17,"x":1569888000000,"y":17},{"Month":"2019-11-01","Type":"Permanent Supportive Housing","Number of People":23,"x":1572566400000,"y":23},{"Month":"2019-12-01","Type":"Permanent Supportive Housing","Number of People":47,"x":1575158400000,"y":47},{"Month":"2020-01-01","Type":"Permanent Supportive Housing","Number of People":26,"x":1577836800000,"y":26},{"Month":"2020-02-01","Type":"Permanent Supportive Housing","Number of People":17,"x":1580515200000,"y":17},{"Month":"2020-03-01","Type":"Permanent Supportive Housing","Number of People":28,"x":1583020800000,"y":28},{"Month":"2020-04-01","Type":"Permanent Supportive Housing","Number of People":7,"x":1585699200000,"y":7},{"Month":"2020-05-01","Type":"Permanent Supportive Housing","Number of People":7,"x":1588291200000,"y":7},{"Month":"2020-06-01","Type":"Permanent Supportive Housing","Number of People":13,"x":1590969600000,"y":13},{"Month":"2020-07-01","Type":"Permanent Supportive Housing","Number of People":14,"x":1593561600000,"y":14},{"Month":"2020-08-01","Type":"Permanent Supportive Housing","Number of People":13,"x":1596240000000,"y":13},{"Month":"2020-09-01","Type":"Permanent Supportive Housing","Number of People":15,"x":1598918400000,"y":15},{"Month":"2020-10-01","Type":"Permanent Supportive Housing","Number of People":41,"x":1601510400000,"y":41},{"Month":"2020-11-01","Type":"Permanent Supportive Housing","Number of People":30,"x":1604188800000,"y":30},{"Month":"2020-12-01","Type":"Permanent Supportive Housing","Number of People":32,"x":1606780800000,"y":32},{"Month":"2021-01-01","Type":"Permanent Supportive Housing","Number of People":24,"x":1609459200000,"y":24},{"Month":"2021-02-01","Type":"Permanent Supportive Housing","Number of People":22,"x":1612137600000,"y":22},{"Month":"2021-03-01","Type":"Permanent Supportive Housing","Number of People":20,"x":1614556800000,"y":20},{"Month":"2021-04-01","Type":"Permanent Supportive Housing","Number of People":27,"x":1617235200000,"y":27},{"Month":"2021-05-01","Type":"Permanent Supportive Housing","Number of People":21,"x":1619827200000,"y":21},{"Month":"2021-06-01","Type":"Permanent Supportive Housing","Number of People":27,"x":1622505600000,"y":27},{"Month":"2021-07-01","Type":"Permanent Supportive Housing","Number of People":14,"x":1625097600000,"y":14},{"Month":"2021-08-01","Type":"Permanent Supportive Housing","Number of People":15,"x":1627776000000,"y":15},{"Month":"2021-09-01","Type":"Permanent Supportive Housing","Number of People":12,"x":1630454400000,"y":12},{"Month":"2021-10-01","Type":"Permanent Supportive Housing","Number of People":15,"x":1633046400000,"y":15},{"Month":"2021-11-01","Type":"Permanent Supportive Housing","Number of People":12,"x":1635724800000,"y":12},{"Month":"2021-12-01","Type":"Permanent Supportive Housing","Number of People":18,"x":1638316800000,"y":18},{"Month":"2022-01-01","Type":"Permanent Supportive Housing","Number of People":15,"x":1640995200000,"y":15},{"Month":"2022-02-01","Type":"Permanent Supportive Housing","Number of People":19,"x":1643673600000,"y":19},{"Month":"2022-03-01","Type":"Permanent Supportive Housing","Number of People":32,"x":1646092800000,"y":32},{"Month":"2022-04-01","Type":"Permanent Supportive Housing","Number of People":22,"x":1648771200000,"y":22},{"Month":"2022-05-01","Type":"Permanent Supportive Housing","Number of People":25,"x":1651363200000,"y":25},{"Month":"2022-06-01","Type":"Permanent Supportive Housing","Number of People":21,"x":1654041600000,"y":21},{"Month":"2022-07-01","Type":"Permanent Supportive Housing","Number of People":20,"x":1656633600000,"y":20},{"Month":"2022-08-01","Type":"Permanent Supportive Housing","Number of People":22,"x":1659312000000,"y":22},{"Month":"2022-09-01","Type":"Permanent Supportive Housing","Number of People":23,"x":1661990400000,"y":23},{"Month":"2022-10-01","Type":"Permanent Supportive Housing","Number of People":14,"x":1664582400000,"y":14},{"Month":"2022-11-01","Type":"Permanent Supportive Housing","Number of People":21,"x":1667260800000,"y":21},{"Month":"2022-12-01","Type":"Permanent Supportive Housing","Number of People":24,"x":1669852800000,"y":24},{"Month":"2023-01-01","Type":"Permanent Supportive Housing","Number of People":20,"x":1672531200000,"y":20},{"Month":"2023-02-01","Type":"Permanent Supportive Housing","Number of People":5,"x":1675209600000,"y":5},{"Month":"2023-03-01","Type":"Permanent Supportive Housing","Number of People":16,"x":1677628800000,"y":16},{"Month":"2023-04-01","Type":"Permanent Supportive Housing","Number of People":12,"x":1680307200000,"y":12},{"Month":"2023-05-01","Type":"Permanent Supportive Housing","Number of People":17,"x":1682899200000,"y":17},{"Month":"2023-06-01","Type":"Permanent Supportive Housing","Number of People":20,"x":1685577600000,"y":20},{"Month":"2023-07-01","Type":"Permanent Supportive Housing","Number of People":29,"x":1688169600000,"y":29}],"type":"column","color":"#710193"},{"name":"Rapid Re-Housing","data":[{"Month":"2019-01-01","Type":"Rapid Re-Housing","Number of People":88,"x":1546300800000,"y":88},{"Month":"2019-02-01","Type":"Rapid Re-Housing","Number of People":96,"x":1548979200000,"y":96},{"Month":"2019-03-01","Type":"Rapid Re-Housing","Number of People":49,"x":1551398400000,"y":49},{"Month":"2019-04-01","Type":"Rapid Re-Housing","Number of People":72,"x":1554076800000,"y":72},{"Month":"2019-05-01","Type":"Rapid Re-Housing","Number of People":88,"x":1556668800000,"y":88},{"Month":"2019-06-01","Type":"Rapid Re-Housing","Number of People":81,"x":1559347200000,"y":81},{"Month":"2019-07-01","Type":"Rapid Re-Housing","Number of People":82,"x":1561939200000,"y":82},{"Month":"2019-08-01","Type":"Rapid Re-Housing","Number of People":107,"x":1564617600000,"y":107},{"Month":"2019-09-01","Type":"Rapid Re-Housing","Number of People":106,"x":1567296000000,"y":106},{"Month":"2019-10-01","Type":"Rapid Re-Housing","Number of People":91,"x":1569888000000,"y":91},{"Month":"2019-11-01","Type":"Rapid Re-Housing","Number of People":70,"x":1572566400000,"y":70},{"Month":"2019-12-01","Type":"Rapid Re-Housing","Number of People":58,"x":1575158400000,"y":58},{"Month":"2020-01-01","Type":"Rapid Re-Housing","Number of People":91,"x":1577836800000,"y":91},{"Month":"2020-02-01","Type":"Rapid Re-Housing","Number of People":74,"x":1580515200000,"y":74},{"Month":"2020-03-01","Type":"Rapid Re-Housing","Number of People":94,"x":1583020800000,"y":94},{"Month":"2020-04-01","Type":"Rapid Re-Housing","Number of People":67,"x":1585699200000,"y":67},{"Month":"2020-05-01","Type":"Rapid Re-Housing","Number of People":80,"x":1588291200000,"y":80},{"Month":"2020-06-01","Type":"Rapid Re-Housing","Number of People":110,"x":1590969600000,"y":110},{"Month":"2020-07-01","Type":"Rapid Re-Housing","Number of People":87,"x":1593561600000,"y":87},{"Month":"2020-08-01","Type":"Rapid Re-Housing","Number of People":96,"x":1596240000000,"y":96},{"Month":"2020-09-01","Type":"Rapid Re-Housing","Number of People":65,"x":1598918400000,"y":65},{"Month":"2020-10-01","Type":"Rapid Re-Housing","Number of People":78,"x":1601510400000,"y":78},{"Month":"2020-11-01","Type":"Rapid Re-Housing","Number of People":108,"x":1604188800000,"y":108},{"Month":"2020-12-01","Type":"Rapid Re-Housing","Number of People":139,"x":1606780800000,"y":139},{"Month":"2021-01-01","Type":"Rapid Re-Housing","Number of People":83,"x":1609459200000,"y":83},{"Month":"2021-02-01","Type":"Rapid Re-Housing","Number of People":55,"x":1612137600000,"y":55},{"Month":"2021-03-01","Type":"Rapid Re-Housing","Number of People":106,"x":1614556800000,"y":106},{"Month":"2021-04-01","Type":"Rapid Re-Housing","Number of People":67,"x":1617235200000,"y":67},{"Month":"2021-05-01","Type":"Rapid Re-Housing","Number of People":101,"x":1619827200000,"y":101},{"Month":"2021-06-01","Type":"Rapid Re-Housing","Number of People":79,"x":1622505600000,"y":79},{"Month":"2021-07-01","Type":"Rapid Re-Housing","Number of People":85,"x":1625097600000,"y":85},{"Month":"2021-08-01","Type":"Rapid Re-Housing","Number of People":163,"x":1627776000000,"y":163},{"Month":"2021-09-01","Type":"Rapid Re-Housing","Number of People":146,"x":1630454400000,"y":146},{"Month":"2021-10-01","Type":"Rapid Re-Housing","Number of People":115,"x":1633046400000,"y":115},{"Month":"2021-11-01","Type":"Rapid Re-Housing","Number of People":85,"x":1635724800000,"y":85},{"Month":"2021-12-01","Type":"Rapid Re-Housing","Number of People":75,"x":1638316800000,"y":75},{"Month":"2022-01-01","Type":"Rapid Re-Housing","Number of People":78,"x":1640995200000,"y":78},{"Month":"2022-02-01","Type":"Rapid Re-Housing","Number of People":66,"x":1643673600000,"y":66},{"Month":"2022-03-01","Type":"Rapid Re-Housing","Number of People":90,"x":1646092800000,"y":90},{"Month":"2022-04-01","Type":"Rapid Re-Housing","Number of People":83,"x":1648771200000,"y":83},{"Month":"2022-05-01","Type":"Rapid Re-Housing","Number of People":61,"x":1651363200000,"y":61},{"Month":"2022-06-01","Type":"Rapid Re-Housing","Number of People":86,"x":1654041600000,"y":86},{"Month":"2022-07-01","Type":"Rapid Re-Housing","Number of People":89,"x":1656633600000,"y":89},{"Month":"2022-08-01","Type":"Rapid Re-Housing","Number of People":85,"x":1659312000000,"y":85},{"Month":"2022-09-01","Type":"Rapid Re-Housing","Number of People":95,"x":1661990400000,"y":95},{"Month":"2022-10-01","Type":"Rapid Re-Housing","Number of People":178,"x":1664582400000,"y":178},{"Month":"2022-11-01","Type":"Rapid Re-Housing","Number of People":81,"x":1667260800000,"y":81},{"Month":"2022-12-01","Type":"Rapid Re-Housing","Number of People":150,"x":1669852800000,"y":150},{"Month":"2023-01-01","Type":"Rapid Re-Housing","Number of People":122,"x":1672531200000,"y":122},{"Month":"2023-02-01","Type":"Rapid Re-Housing","Number of People":54,"x":1675209600000,"y":54},{"Month":"2023-03-01","Type":"Rapid Re-Housing","Number of People":89,"x":1677628800000,"y":89},{"Month":"2023-04-01","Type":"Rapid Re-Housing","Number of People":158,"x":1680307200000,"y":158},{"Month":"2023-05-01","Type":"Rapid Re-Housing","Number of People":133,"x":1682899200000,"y":133},{"Month":"2023-06-01","Type":"Rapid Re-Housing","Number of People":129,"x":1685577600000,"y":129},{"Month":"2023-07-01","Type":"Rapid Re-Housing","Number of People":121,"x":1688169600000,"y":121}],"type":"column","color":"#FF160C"}],"xAxis":{"type":"datetime","title":{"text":"Month"},"plotLines":[{"color":"#32612D","value":1569888000000,"width":2,"zIndex":5,"label":{"text":"Guided Path Pilot Project","verticalAlign":"top","style":{"color":"black"},"textAlign":"left","rotation":0,"y":13}},{"color":"#696880","value":1617235200000,"width":2,"zIndex":5,"label":{"text":"Finding Home ATX Summit","verticalAlign":"top","style":{"color":"black"},"textAlign":"left","rotation":0,"y":13}},{"color":"#0492C2","value":1651363200000,"width":2,"zIndex":5,"label":{"text":"ASOC Begins","verticalAlign":"top","style":{"color":"black"},"textAlign":"left","rotation":0,"y":13}}]}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":",","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="moveins-by-race-ethnicity" class="level2">
+<h2 class="anchored" data-anchor-id="moveins-by-race-ethnicity"><strong>Permanent Housing Move-Ins by Race/Ethnicity</strong></h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6aecc64a90de2180814b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-6aecc64a90de2180814b">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Number of People"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"column":{"stacking":"normal"}},"series":[{"name":"Black (Non-Hispanic)","data":[{"Month":"2019-01-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":40,"x":1546300800000,"y":40},{"Month":"2019-02-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":52,"x":1548979200000,"y":52},{"Month":"2019-03-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":32,"x":1551398400000,"y":32},{"Month":"2019-04-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":25,"x":1554076800000,"y":25},{"Month":"2019-05-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":36,"x":1556668800000,"y":36},{"Month":"2019-06-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":42,"x":1559347200000,"y":42},{"Month":"2019-07-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":39,"x":1561939200000,"y":39},{"Month":"2019-08-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":54,"x":1564617600000,"y":54},{"Month":"2019-09-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":72,"x":1567296000000,"y":72},{"Month":"2019-10-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":36,"x":1569888000000,"y":36},{"Month":"2019-11-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":33,"x":1572566400000,"y":33},{"Month":"2019-12-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":38,"x":1575158400000,"y":38},{"Month":"2020-01-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":47,"x":1577836800000,"y":47},{"Month":"2020-02-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":42,"x":1580515200000,"y":42},{"Month":"2020-03-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":53,"x":1583020800000,"y":53},{"Month":"2020-04-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":39,"x":1585699200000,"y":39},{"Month":"2020-05-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":34,"x":1588291200000,"y":34},{"Month":"2020-06-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":53,"x":1590969600000,"y":53},{"Month":"2020-07-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":33,"x":1593561600000,"y":33},{"Month":"2020-08-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":46,"x":1596240000000,"y":46},{"Month":"2020-09-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":13,"x":1598918400000,"y":13},{"Month":"2020-10-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":41,"x":1601510400000,"y":41},{"Month":"2020-11-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":58,"x":1604188800000,"y":58},{"Month":"2020-12-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":62,"x":1606780800000,"y":62},{"Month":"2021-01-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":45,"x":1609459200000,"y":45},{"Month":"2021-02-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":21,"x":1612137600000,"y":21},{"Month":"2021-03-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":42,"x":1614556800000,"y":42},{"Month":"2021-04-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":34,"x":1617235200000,"y":34},{"Month":"2021-05-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":34,"x":1619827200000,"y":34},{"Month":"2021-06-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":28,"x":1622505600000,"y":28},{"Month":"2021-07-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":32,"x":1625097600000,"y":32},{"Month":"2021-08-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":71,"x":1627776000000,"y":71},{"Month":"2021-09-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":49,"x":1630454400000,"y":49},{"Month":"2021-10-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":51,"x":1633046400000,"y":51},{"Month":"2021-11-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":53,"x":1635724800000,"y":53},{"Month":"2021-12-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":32,"x":1638316800000,"y":32},{"Month":"2022-01-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":40,"x":1640995200000,"y":40},{"Month":"2022-02-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":28,"x":1643673600000,"y":28},{"Month":"2022-03-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":33,"x":1646092800000,"y":33},{"Month":"2022-04-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":31,"x":1648771200000,"y":31},{"Month":"2022-05-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":30,"x":1651363200000,"y":30},{"Month":"2022-06-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":38,"x":1654041600000,"y":38},{"Month":"2022-07-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":36,"x":1656633600000,"y":36},{"Month":"2022-08-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":34,"x":1659312000000,"y":34},{"Month":"2022-09-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":57,"x":1661990400000,"y":57},{"Month":"2022-10-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":79,"x":1664582400000,"y":79},{"Month":"2022-11-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":30,"x":1667260800000,"y":30},{"Month":"2022-12-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":69,"x":1669852800000,"y":69},{"Month":"2023-01-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":42,"x":1672531200000,"y":42},{"Month":"2023-02-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":14,"x":1675209600000,"y":14},{"Month":"2023-03-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":37,"x":1677628800000,"y":37},{"Month":"2023-04-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":59,"x":1680307200000,"y":59},{"Month":"2023-05-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":69,"x":1682899200000,"y":69},{"Month":"2023-06-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":45,"x":1685577600000,"y":45},{"Month":"2023-07-01","Race/Ethnicity":"Black (Non-Hispanic)","Number of People":42,"x":1688169600000,"y":42}],"type":"column","color":"#1034A6"},{"name":"Hispanic/Latino","data":[{"Month":"2019-01-01","Race/Ethnicity":"Hispanic/Latino","Number of People":24,"x":1546300800000,"y":24},{"Month":"2019-02-01","Race/Ethnicity":"Hispanic/Latino","Number of People":24,"x":1548979200000,"y":24},{"Month":"2019-03-01","Race/Ethnicity":"Hispanic/Latino","Number of People":10,"x":1551398400000,"y":10},{"Month":"2019-04-01","Race/Ethnicity":"Hispanic/Latino","Number of People":25,"x":1554076800000,"y":25},{"Month":"2019-05-01","Race/Ethnicity":"Hispanic/Latino","Number of People":43,"x":1556668800000,"y":43},{"Month":"2019-06-01","Race/Ethnicity":"Hispanic/Latino","Number of People":19,"x":1559347200000,"y":19},{"Month":"2019-07-01","Race/Ethnicity":"Hispanic/Latino","Number of People":22,"x":1561939200000,"y":22},{"Month":"2019-08-01","Race/Ethnicity":"Hispanic/Latino","Number of People":34,"x":1564617600000,"y":34},{"Month":"2019-09-01","Race/Ethnicity":"Hispanic/Latino","Number of People":17,"x":1567296000000,"y":17},{"Month":"2019-10-01","Race/Ethnicity":"Hispanic/Latino","Number of People":27,"x":1569888000000,"y":27},{"Month":"2019-11-01","Race/Ethnicity":"Hispanic/Latino","Number of People":23,"x":1572566400000,"y":23},{"Month":"2019-12-01","Race/Ethnicity":"Hispanic/Latino","Number of People":21,"x":1575158400000,"y":21},{"Month":"2020-01-01","Race/Ethnicity":"Hispanic/Latino","Number of People":22,"x":1577836800000,"y":22},{"Month":"2020-02-01","Race/Ethnicity":"Hispanic/Latino","Number of People":20,"x":1580515200000,"y":20},{"Month":"2020-03-01","Race/Ethnicity":"Hispanic/Latino","Number of People":32,"x":1583020800000,"y":32},{"Month":"2020-04-01","Race/Ethnicity":"Hispanic/Latino","Number of People":19,"x":1585699200000,"y":19},{"Month":"2020-05-01","Race/Ethnicity":"Hispanic/Latino","Number of People":30,"x":1588291200000,"y":30},{"Month":"2020-06-01","Race/Ethnicity":"Hispanic/Latino","Number of People":39,"x":1590969600000,"y":39},{"Month":"2020-07-01","Race/Ethnicity":"Hispanic/Latino","Number of People":37,"x":1593561600000,"y":37},{"Month":"2020-08-01","Race/Ethnicity":"Hispanic/Latino","Number of People":20,"x":1596240000000,"y":20},{"Month":"2020-09-01","Race/Ethnicity":"Hispanic/Latino","Number of People":38,"x":1598918400000,"y":38},{"Month":"2020-10-01","Race/Ethnicity":"Hispanic/Latino","Number of People":41,"x":1601510400000,"y":41},{"Month":"2020-11-01","Race/Ethnicity":"Hispanic/Latino","Number of People":35,"x":1604188800000,"y":35},{"Month":"2020-12-01","Race/Ethnicity":"Hispanic/Latino","Number of People":50,"x":1606780800000,"y":50},{"Month":"2021-01-01","Race/Ethnicity":"Hispanic/Latino","Number of People":23,"x":1609459200000,"y":23},{"Month":"2021-02-01","Race/Ethnicity":"Hispanic/Latino","Number of People":21,"x":1612137600000,"y":21},{"Month":"2021-03-01","Race/Ethnicity":"Hispanic/Latino","Number of People":43,"x":1614556800000,"y":43},{"Month":"2021-04-01","Race/Ethnicity":"Hispanic/Latino","Number of People":20,"x":1617235200000,"y":20},{"Month":"2021-05-01","Race/Ethnicity":"Hispanic/Latino","Number of People":28,"x":1619827200000,"y":28},{"Month":"2021-06-01","Race/Ethnicity":"Hispanic/Latino","Number of People":30,"x":1622505600000,"y":30},{"Month":"2021-07-01","Race/Ethnicity":"Hispanic/Latino","Number of People":40,"x":1625097600000,"y":40},{"Month":"2021-08-01","Race/Ethnicity":"Hispanic/Latino","Number of People":56,"x":1627776000000,"y":56},{"Month":"2021-09-01","Race/Ethnicity":"Hispanic/Latino","Number of People":45,"x":1630454400000,"y":45},{"Month":"2021-10-01","Race/Ethnicity":"Hispanic/Latino","Number of People":51,"x":1633046400000,"y":51},{"Month":"2021-11-01","Race/Ethnicity":"Hispanic/Latino","Number of People":20,"x":1635724800000,"y":20},{"Month":"2021-12-01","Race/Ethnicity":"Hispanic/Latino","Number of People":21,"x":1638316800000,"y":21},{"Month":"2022-01-01","Race/Ethnicity":"Hispanic/Latino","Number of People":24,"x":1640995200000,"y":24},{"Month":"2022-02-01","Race/Ethnicity":"Hispanic/Latino","Number of People":23,"x":1643673600000,"y":23},{"Month":"2022-03-01","Race/Ethnicity":"Hispanic/Latino","Number of People":43,"x":1646092800000,"y":43},{"Month":"2022-04-01","Race/Ethnicity":"Hispanic/Latino","Number of People":37,"x":1648771200000,"y":37},{"Month":"2022-05-01","Race/Ethnicity":"Hispanic/Latino","Number of People":16,"x":1651363200000,"y":16},{"Month":"2022-06-01","Race/Ethnicity":"Hispanic/Latino","Number of People":39,"x":1654041600000,"y":39},{"Month":"2022-07-01","Race/Ethnicity":"Hispanic/Latino","Number of People":48,"x":1656633600000,"y":48},{"Month":"2022-08-01","Race/Ethnicity":"Hispanic/Latino","Number of People":37,"x":1659312000000,"y":37},{"Month":"2022-09-01","Race/Ethnicity":"Hispanic/Latino","Number of People":24,"x":1661990400000,"y":24},{"Month":"2022-10-01","Race/Ethnicity":"Hispanic/Latino","Number of People":70,"x":1664582400000,"y":70},{"Month":"2022-11-01","Race/Ethnicity":"Hispanic/Latino","Number of People":35,"x":1667260800000,"y":35},{"Month":"2022-12-01","Race/Ethnicity":"Hispanic/Latino","Number of People":39,"x":1669852800000,"y":39},{"Month":"2023-01-01","Race/Ethnicity":"Hispanic/Latino","Number of People":54,"x":1672531200000,"y":54},{"Month":"2023-02-01","Race/Ethnicity":"Hispanic/Latino","Number of People":22,"x":1675209600000,"y":22},{"Month":"2023-03-01","Race/Ethnicity":"Hispanic/Latino","Number of People":34,"x":1677628800000,"y":34},{"Month":"2023-04-01","Race/Ethnicity":"Hispanic/Latino","Number of People":71,"x":1680307200000,"y":71},{"Month":"2023-05-01","Race/Ethnicity":"Hispanic/Latino","Number of People":34,"x":1682899200000,"y":34},{"Month":"2023-06-01","Race/Ethnicity":"Hispanic/Latino","Number of People":68,"x":1685577600000,"y":68},{"Month":"2023-07-01","Race/Ethnicity":"Hispanic/Latino","Number of People":74,"x":1688169600000,"y":74}],"type":"column","color":"#66FF00"},{"name":"White (Non-Hispanic)","data":[{"Month":"2019-01-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":22,"x":1546300800000,"y":22},{"Month":"2019-02-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":27,"x":1548979200000,"y":27},{"Month":"2019-03-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":13,"x":1551398400000,"y":13},{"Month":"2019-04-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":16,"x":1554076800000,"y":16},{"Month":"2019-05-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":11,"x":1556668800000,"y":11},{"Month":"2019-06-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":24,"x":1559347200000,"y":24},{"Month":"2019-07-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":24,"x":1561939200000,"y":24},{"Month":"2019-08-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":16,"x":1564617600000,"y":16},{"Month":"2019-09-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":12,"x":1567296000000,"y":12},{"Month":"2019-10-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":33,"x":1569888000000,"y":33},{"Month":"2019-11-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":21,"x":1572566400000,"y":21},{"Month":"2019-12-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":28,"x":1575158400000,"y":28},{"Month":"2020-01-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":33,"x":1577836800000,"y":33},{"Month":"2020-02-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":21,"x":1580515200000,"y":21},{"Month":"2020-03-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":26,"x":1583020800000,"y":26},{"Month":"2020-04-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":16,"x":1585699200000,"y":16},{"Month":"2020-05-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":14,"x":1588291200000,"y":14},{"Month":"2020-06-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":17,"x":1590969600000,"y":17},{"Month":"2020-07-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":19,"x":1593561600000,"y":19},{"Month":"2020-08-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":28,"x":1596240000000,"y":28},{"Month":"2020-09-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":21,"x":1598918400000,"y":21},{"Month":"2020-10-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":20,"x":1601510400000,"y":20},{"Month":"2020-11-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":23,"x":1604188800000,"y":23},{"Month":"2020-12-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":42,"x":1606780800000,"y":42},{"Month":"2021-01-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":22,"x":1609459200000,"y":22},{"Month":"2021-02-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":18,"x":1612137600000,"y":18},{"Month":"2021-03-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":26,"x":1614556800000,"y":26},{"Month":"2021-04-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":21,"x":1617235200000,"y":21},{"Month":"2021-05-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":36,"x":1619827200000,"y":36},{"Month":"2021-06-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":25,"x":1622505600000,"y":25},{"Month":"2021-07-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":18,"x":1625097600000,"y":18},{"Month":"2021-08-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":33,"x":1627776000000,"y":33},{"Month":"2021-09-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":46,"x":1630454400000,"y":46},{"Month":"2021-10-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":9,"x":1633046400000,"y":9},{"Month":"2021-11-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":15,"x":1635724800000,"y":15},{"Month":"2021-12-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":27,"x":1638316800000,"y":27},{"Month":"2022-01-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":17,"x":1640995200000,"y":17},{"Month":"2022-02-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":23,"x":1643673600000,"y":23},{"Month":"2022-03-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":27,"x":1646092800000,"y":27},{"Month":"2022-04-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":20,"x":1648771200000,"y":20},{"Month":"2022-05-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":27,"x":1651363200000,"y":27},{"Month":"2022-06-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":18,"x":1654041600000,"y":18},{"Month":"2022-07-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":19,"x":1656633600000,"y":19},{"Month":"2022-08-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":20,"x":1659312000000,"y":20},{"Month":"2022-09-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":28,"x":1661990400000,"y":28},{"Month":"2022-10-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":28,"x":1664582400000,"y":28},{"Month":"2022-11-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":27,"x":1667260800000,"y":27},{"Month":"2022-12-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":44,"x":1669852800000,"y":44},{"Month":"2023-01-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":28,"x":1672531200000,"y":28},{"Month":"2023-02-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":16,"x":1675209600000,"y":16},{"Month":"2023-03-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":30,"x":1677628800000,"y":30},{"Month":"2023-04-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":24,"x":1680307200000,"y":24},{"Month":"2023-05-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":37,"x":1682899200000,"y":37},{"Month":"2023-06-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":25,"x":1685577600000,"y":25},{"Month":"2023-07-01","Race/Ethnicity":"White (Non-Hispanic)","Number of People":30,"x":1688169600000,"y":30}],"type":"column","color":"#FF00CD"},{"name":"Two or more races","data":[{"Month":"2019-01-01","Race/Ethnicity":"Two or more races","Number of People":4,"x":1546300800000,"y":4},{"Month":"2019-02-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1548979200000,"y":6},{"Month":"2019-03-01","Race/Ethnicity":"Two or more races","Number of People":1,"x":1551398400000,"y":1},{"Month":"2019-04-01","Race/Ethnicity":"Two or more races","Number of People":8,"x":1554076800000,"y":8},{"Month":"2019-05-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1556668800000,"y":6},{"Month":"2019-06-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1559347200000,"y":5},{"Month":"2019-07-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1561939200000,"y":5},{"Month":"2019-08-01","Race/Ethnicity":"Two or more races","Number of People":4,"x":1564617600000,"y":4},{"Month":"2019-09-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1567296000000,"y":6},{"Month":"2019-10-01","Race/Ethnicity":"Two or more races","Number of People":2,"x":1569888000000,"y":2},{"Month":"2019-11-01","Race/Ethnicity":"Two or more races","Number of People":2,"x":1572566400000,"y":2},{"Month":"2019-12-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1575158400000,"y":3},{"Month":"2020-01-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1577836800000,"y":6},{"Month":"2020-02-01","Race/Ethnicity":"Two or more races","Number of People":2,"x":1580515200000,"y":2},{"Month":"2020-03-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1583020800000,"y":3},{"Month":"2020-04-01","Race/Ethnicity":"Two or more races","Number of People":0,"x":1585699200000,"y":0},{"Month":"2020-05-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1588291200000,"y":6},{"Month":"2020-06-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1590969600000,"y":5},{"Month":"2020-07-01","Race/Ethnicity":"Two or more races","Number of People":4,"x":1593561600000,"y":4},{"Month":"2020-08-01","Race/Ethnicity":"Two or more races","Number of People":11,"x":1596240000000,"y":11},{"Month":"2020-09-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1598918400000,"y":6},{"Month":"2020-10-01","Race/Ethnicity":"Two or more races","Number of People":11,"x":1601510400000,"y":11},{"Month":"2020-11-01","Race/Ethnicity":"Two or more races","Number of People":10,"x":1604188800000,"y":10},{"Month":"2020-12-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1606780800000,"y":5},{"Month":"2021-01-01","Race/Ethnicity":"Two or more races","Number of People":2,"x":1609459200000,"y":2},{"Month":"2021-02-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1612137600000,"y":3},{"Month":"2021-03-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1614556800000,"y":5},{"Month":"2021-04-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1617235200000,"y":6},{"Month":"2021-05-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1619827200000,"y":3},{"Month":"2021-06-01","Race/Ethnicity":"Two or more races","Number of People":7,"x":1622505600000,"y":7},{"Month":"2021-07-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1625097600000,"y":3},{"Month":"2021-08-01","Race/Ethnicity":"Two or more races","Number of People":8,"x":1627776000000,"y":8},{"Month":"2021-09-01","Race/Ethnicity":"Two or more races","Number of People":9,"x":1630454400000,"y":9},{"Month":"2021-10-01","Race/Ethnicity":"Two or more races","Number of People":7,"x":1633046400000,"y":7},{"Month":"2021-11-01","Race/Ethnicity":"Two or more races","Number of People":1,"x":1635724800000,"y":1},{"Month":"2021-12-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1638316800000,"y":3},{"Month":"2022-01-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1640995200000,"y":5},{"Month":"2022-02-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1643673600000,"y":3},{"Month":"2022-03-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1646092800000,"y":5},{"Month":"2022-04-01","Race/Ethnicity":"Two or more races","Number of People":8,"x":1648771200000,"y":8},{"Month":"2022-05-01","Race/Ethnicity":"Two or more races","Number of People":1,"x":1651363200000,"y":1},{"Month":"2022-06-01","Race/Ethnicity":"Two or more races","Number of People":1,"x":1654041600000,"y":1},{"Month":"2022-07-01","Race/Ethnicity":"Two or more races","Number of People":0,"x":1656633600000,"y":0},{"Month":"2022-08-01","Race/Ethnicity":"Two or more races","Number of People":4,"x":1659312000000,"y":4},{"Month":"2022-09-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1661990400000,"y":3},{"Month":"2022-10-01","Race/Ethnicity":"Two or more races","Number of People":9,"x":1664582400000,"y":9},{"Month":"2022-11-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1667260800000,"y":3},{"Month":"2022-12-01","Race/Ethnicity":"Two or more races","Number of People":5,"x":1669852800000,"y":5},{"Month":"2023-01-01","Race/Ethnicity":"Two or more races","Number of People":6,"x":1672531200000,"y":6},{"Month":"2023-02-01","Race/Ethnicity":"Two or more races","Number of People":4,"x":1675209600000,"y":4},{"Month":"2023-03-01","Race/Ethnicity":"Two or more races","Number of People":2,"x":1677628800000,"y":2},{"Month":"2023-04-01","Race/Ethnicity":"Two or more races","Number of People":10,"x":1680307200000,"y":10},{"Month":"2023-05-01","Race/Ethnicity":"Two or more races","Number of People":3,"x":1682899200000,"y":3},{"Month":"2023-06-01","Race/Ethnicity":"Two or more races","Number of People":9,"x":1685577600000,"y":9},{"Month":"2023-07-01","Race/Ethnicity":"Two or more races","Number of People":2,"x":1688169600000,"y":2}],"type":"column","color":"#FC6A03"},{"name":"American Indian","data":[{"Month":"2019-01-01","Race/Ethnicity":"American Indian","Number of People":2,"x":1546300800000,"y":2},{"Month":"2019-02-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1548979200000,"y":0},{"Month":"2019-03-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1551398400000,"y":0},{"Month":"2019-04-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1554076800000,"y":1},{"Month":"2019-05-01","Race/Ethnicity":"American Indian","Number of People":3,"x":1556668800000,"y":3},{"Month":"2019-06-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1559347200000,"y":0},{"Month":"2019-07-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1561939200000,"y":0},{"Month":"2019-08-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1564617600000,"y":0},{"Month":"2019-09-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1567296000000,"y":0},{"Month":"2019-10-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1569888000000,"y":1},{"Month":"2019-11-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1572566400000,"y":1},{"Month":"2019-12-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1575158400000,"y":0},{"Month":"2020-01-01","Race/Ethnicity":"American Indian","Number of People":2,"x":1577836800000,"y":2},{"Month":"2020-02-01","Race/Ethnicity":"American Indian","Number of People":2,"x":1580515200000,"y":2},{"Month":"2020-03-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1583020800000,"y":0},{"Month":"2020-04-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1585699200000,"y":0},{"Month":"2020-05-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1588291200000,"y":0},{"Month":"2020-06-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1590969600000,"y":0},{"Month":"2020-07-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1593561600000,"y":1},{"Month":"2020-08-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1596240000000,"y":0},{"Month":"2020-09-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1598918400000,"y":0},{"Month":"2020-10-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1601510400000,"y":0},{"Month":"2020-11-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1604188800000,"y":0},{"Month":"2020-12-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1606780800000,"y":0},{"Month":"2021-01-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1609459200000,"y":0},{"Month":"2021-02-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1612137600000,"y":1},{"Month":"2021-03-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1614556800000,"y":0},{"Month":"2021-04-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1617235200000,"y":0},{"Month":"2021-05-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1619827200000,"y":0},{"Month":"2021-06-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1622505600000,"y":0},{"Month":"2021-07-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1625097600000,"y":0},{"Month":"2021-08-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1627776000000,"y":0},{"Month":"2021-09-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1630454400000,"y":0},{"Month":"2021-10-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1633046400000,"y":1},{"Month":"2021-11-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1635724800000,"y":0},{"Month":"2021-12-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1638316800000,"y":1},{"Month":"2022-01-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1640995200000,"y":0},{"Month":"2022-02-01","Race/Ethnicity":"American Indian","Number of People":2,"x":1643673600000,"y":2},{"Month":"2022-03-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1646092800000,"y":0},{"Month":"2022-04-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1648771200000,"y":0},{"Month":"2022-05-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1651363200000,"y":1},{"Month":"2022-06-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1654041600000,"y":1},{"Month":"2022-07-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1656633600000,"y":0},{"Month":"2022-08-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1659312000000,"y":1},{"Month":"2022-09-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1661990400000,"y":0},{"Month":"2022-10-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1664582400000,"y":1},{"Month":"2022-11-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1667260800000,"y":0},{"Month":"2022-12-01","Race/Ethnicity":"American Indian","Number of People":2,"x":1669852800000,"y":2},{"Month":"2023-01-01","Race/Ethnicity":"American Indian","Number of People":2,"x":1672531200000,"y":2},{"Month":"2023-02-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1675209600000,"y":0},{"Month":"2023-03-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1677628800000,"y":0},{"Month":"2023-04-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1680307200000,"y":0},{"Month":"2023-05-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1682899200000,"y":0},{"Month":"2023-06-01","Race/Ethnicity":"American Indian","Number of People":0,"x":1685577600000,"y":0},{"Month":"2023-07-01","Race/Ethnicity":"American Indian","Number of People":1,"x":1688169600000,"y":1}],"type":"column","color":"#710193"},{"name":"Asian","data":[{"Month":"2019-01-01","Race/Ethnicity":"Asian","Number of People":0,"x":1546300800000,"y":0},{"Month":"2019-02-01","Race/Ethnicity":"Asian","Number of People":0,"x":1548979200000,"y":0},{"Month":"2019-03-01","Race/Ethnicity":"Asian","Number of People":0,"x":1551398400000,"y":0},{"Month":"2019-04-01","Race/Ethnicity":"Asian","Number of People":0,"x":1554076800000,"y":0},{"Month":"2019-05-01","Race/Ethnicity":"Asian","Number of People":3,"x":1556668800000,"y":3},{"Month":"2019-06-01","Race/Ethnicity":"Asian","Number of People":0,"x":1559347200000,"y":0},{"Month":"2019-07-01","Race/Ethnicity":"Asian","Number of People":0,"x":1561939200000,"y":0},{"Month":"2019-08-01","Race/Ethnicity":"Asian","Number of People":1,"x":1564617600000,"y":1},{"Month":"2019-09-01","Race/Ethnicity":"Asian","Number of People":0,"x":1567296000000,"y":0},{"Month":"2019-10-01","Race/Ethnicity":"Asian","Number of People":0,"x":1569888000000,"y":0},{"Month":"2019-11-01","Race/Ethnicity":"Asian","Number of People":0,"x":1572566400000,"y":0},{"Month":"2019-12-01","Race/Ethnicity":"Asian","Number of People":0,"x":1575158400000,"y":0},{"Month":"2020-01-01","Race/Ethnicity":"Asian","Number of People":0,"x":1577836800000,"y":0},{"Month":"2020-02-01","Race/Ethnicity":"Asian","Number of People":0,"x":1580515200000,"y":0},{"Month":"2020-03-01","Race/Ethnicity":"Asian","Number of People":0,"x":1583020800000,"y":0},{"Month":"2020-04-01","Race/Ethnicity":"Asian","Number of People":0,"x":1585699200000,"y":0},{"Month":"2020-05-01","Race/Ethnicity":"Asian","Number of People":0,"x":1588291200000,"y":0},{"Month":"2020-06-01","Race/Ethnicity":"Asian","Number of People":1,"x":1590969600000,"y":1},{"Month":"2020-07-01","Race/Ethnicity":"Asian","Number of People":0,"x":1593561600000,"y":0},{"Month":"2020-08-01","Race/Ethnicity":"Asian","Number of People":0,"x":1596240000000,"y":0},{"Month":"2020-09-01","Race/Ethnicity":"Asian","Number of People":0,"x":1598918400000,"y":0},{"Month":"2020-10-01","Race/Ethnicity":"Asian","Number of People":0,"x":1601510400000,"y":0},{"Month":"2020-11-01","Race/Ethnicity":"Asian","Number of People":0,"x":1604188800000,"y":0},{"Month":"2020-12-01","Race/Ethnicity":"Asian","Number of People":0,"x":1606780800000,"y":0},{"Month":"2021-01-01","Race/Ethnicity":"Asian","Number of People":0,"x":1609459200000,"y":0},{"Month":"2021-02-01","Race/Ethnicity":"Asian","Number of People":1,"x":1612137600000,"y":1},{"Month":"2021-03-01","Race/Ethnicity":"Asian","Number of People":1,"x":1614556800000,"y":1},{"Month":"2021-04-01","Race/Ethnicity":"Asian","Number of People":0,"x":1617235200000,"y":0},{"Month":"2021-05-01","Race/Ethnicity":"Asian","Number of People":0,"x":1619827200000,"y":0},{"Month":"2021-06-01","Race/Ethnicity":"Asian","Number of People":0,"x":1622505600000,"y":0},{"Month":"2021-07-01","Race/Ethnicity":"Asian","Number of People":0,"x":1625097600000,"y":0},{"Month":"2021-08-01","Race/Ethnicity":"Asian","Number of People":0,"x":1627776000000,"y":0},{"Month":"2021-09-01","Race/Ethnicity":"Asian","Number of People":1,"x":1630454400000,"y":1},{"Month":"2021-10-01","Race/Ethnicity":"Asian","Number of People":0,"x":1633046400000,"y":0},{"Month":"2021-11-01","Race/Ethnicity":"Asian","Number of People":0,"x":1635724800000,"y":0},{"Month":"2021-12-01","Race/Ethnicity":"Asian","Number of People":0,"x":1638316800000,"y":0},{"Month":"2022-01-01","Race/Ethnicity":"Asian","Number of People":0,"x":1640995200000,"y":0},{"Month":"2022-02-01","Race/Ethnicity":"Asian","Number of People":0,"x":1643673600000,"y":0},{"Month":"2022-03-01","Race/Ethnicity":"Asian","Number of People":0,"x":1646092800000,"y":0},{"Month":"2022-04-01","Race/Ethnicity":"Asian","Number of People":0,"x":1648771200000,"y":0},{"Month":"2022-05-01","Race/Ethnicity":"Asian","Number of People":0,"x":1651363200000,"y":0},{"Month":"2022-06-01","Race/Ethnicity":"Asian","Number of People":0,"x":1654041600000,"y":0},{"Month":"2022-07-01","Race/Ethnicity":"Asian","Number of People":0,"x":1656633600000,"y":0},{"Month":"2022-08-01","Race/Ethnicity":"Asian","Number of People":0,"x":1659312000000,"y":0},{"Month":"2022-09-01","Race/Ethnicity":"Asian","Number of People":0,"x":1661990400000,"y":0},{"Month":"2022-10-01","Race/Ethnicity":"Asian","Number of People":0,"x":1664582400000,"y":0},{"Month":"2022-11-01","Race/Ethnicity":"Asian","Number of People":0,"x":1667260800000,"y":0},{"Month":"2022-12-01","Race/Ethnicity":"Asian","Number of People":0,"x":1669852800000,"y":0},{"Month":"2023-01-01","Race/Ethnicity":"Asian","Number of People":0,"x":1672531200000,"y":0},{"Month":"2023-02-01","Race/Ethnicity":"Asian","Number of People":0,"x":1675209600000,"y":0},{"Month":"2023-03-01","Race/Ethnicity":"Asian","Number of People":0,"x":1677628800000,"y":0},{"Month":"2023-04-01","Race/Ethnicity":"Asian","Number of People":0,"x":1680307200000,"y":0},{"Month":"2023-05-01","Race/Ethnicity":"Asian","Number of People":1,"x":1682899200000,"y":1},{"Month":"2023-06-01","Race/Ethnicity":"Asian","Number of People":1,"x":1685577600000,"y":1},{"Month":"2023-07-01","Race/Ethnicity":"Asian","Number of People":0,"x":1688169600000,"y":0}],"type":"column","color":"#00FFFF"},{"name":"Data not collected","data":[{"Month":"2019-01-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1546300800000,"y":2},{"Month":"2019-02-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1548979200000,"y":0},{"Month":"2019-03-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1551398400000,"y":0},{"Month":"2019-04-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1554076800000,"y":0},{"Month":"2019-05-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1556668800000,"y":0},{"Month":"2019-06-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1559347200000,"y":0},{"Month":"2019-07-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1561939200000,"y":0},{"Month":"2019-08-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1564617600000,"y":0},{"Month":"2019-09-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1567296000000,"y":0},{"Month":"2019-10-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1569888000000,"y":0},{"Month":"2019-11-01","Race/Ethnicity":"Data not collected","Number of People":1,"x":1572566400000,"y":1},{"Month":"2019-12-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1575158400000,"y":0},{"Month":"2020-01-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1577836800000,"y":0},{"Month":"2020-02-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1580515200000,"y":0},{"Month":"2020-03-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1583020800000,"y":2},{"Month":"2020-04-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1585699200000,"y":0},{"Month":"2020-05-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1588291200000,"y":0},{"Month":"2020-06-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1590969600000,"y":2},{"Month":"2020-07-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1593561600000,"y":2},{"Month":"2020-08-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1596240000000,"y":2},{"Month":"2020-09-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1598918400000,"y":0},{"Month":"2020-10-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1601510400000,"y":0},{"Month":"2020-11-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1604188800000,"y":2},{"Month":"2020-12-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1606780800000,"y":0},{"Month":"2021-01-01","Race/Ethnicity":"Data not collected","Number of People":1,"x":1609459200000,"y":1},{"Month":"2021-02-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1612137600000,"y":0},{"Month":"2021-03-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1614556800000,"y":0},{"Month":"2021-04-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1617235200000,"y":0},{"Month":"2021-05-01","Race/Ethnicity":"Data not collected","Number of People":3,"x":1619827200000,"y":3},{"Month":"2021-06-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1622505600000,"y":0},{"Month":"2021-07-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1625097600000,"y":0},{"Month":"2021-08-01","Race/Ethnicity":"Data not collected","Number of People":4,"x":1627776000000,"y":4},{"Month":"2021-09-01","Race/Ethnicity":"Data not collected","Number of People":1,"x":1630454400000,"y":1},{"Month":"2021-10-01","Race/Ethnicity":"Data not collected","Number of People":1,"x":1633046400000,"y":1},{"Month":"2021-11-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1635724800000,"y":0},{"Month":"2021-12-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1638316800000,"y":0},{"Month":"2022-01-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1640995200000,"y":0},{"Month":"2022-02-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1643673600000,"y":0},{"Month":"2022-03-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1646092800000,"y":0},{"Month":"2022-04-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1648771200000,"y":0},{"Month":"2022-05-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1651363200000,"y":0},{"Month":"2022-06-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1654041600000,"y":0},{"Month":"2022-07-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1656633600000,"y":0},{"Month":"2022-08-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1659312000000,"y":0},{"Month":"2022-09-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1661990400000,"y":0},{"Month":"2022-10-01","Race/Ethnicity":"Data not collected","Number of People":1,"x":1664582400000,"y":1},{"Month":"2022-11-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1667260800000,"y":0},{"Month":"2022-12-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1669852800000,"y":0},{"Month":"2023-01-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1672531200000,"y":2},{"Month":"2023-02-01","Race/Ethnicity":"Data not collected","Number of People":2,"x":1675209600000,"y":2},{"Month":"2023-03-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1677628800000,"y":0},{"Month":"2023-04-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1680307200000,"y":0},{"Month":"2023-05-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1682899200000,"y":0},{"Month":"2023-06-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1685577600000,"y":0},{"Month":"2023-07-01","Race/Ethnicity":"Data not collected","Number of People":0,"x":1688169600000,"y":0}],"type":"column","color":"#000000"},{"name":"Pacific Islander","data":[{"Month":"2019-01-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1546300800000,"y":0},{"Month":"2019-02-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1548979200000,"y":0},{"Month":"2019-03-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1551398400000,"y":1},{"Month":"2019-04-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1554076800000,"y":1},{"Month":"2019-05-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1556668800000,"y":0},{"Month":"2019-06-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1559347200000,"y":0},{"Month":"2019-07-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1561939200000,"y":0},{"Month":"2019-08-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1564617600000,"y":1},{"Month":"2019-09-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1567296000000,"y":0},{"Month":"2019-10-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1569888000000,"y":0},{"Month":"2019-11-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1572566400000,"y":0},{"Month":"2019-12-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1575158400000,"y":0},{"Month":"2020-01-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1577836800000,"y":0},{"Month":"2020-02-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1580515200000,"y":0},{"Month":"2020-03-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1583020800000,"y":0},{"Month":"2020-04-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1585699200000,"y":0},{"Month":"2020-05-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1588291200000,"y":0},{"Month":"2020-06-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1590969600000,"y":0},{"Month":"2020-07-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1593561600000,"y":0},{"Month":"2020-08-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1596240000000,"y":0},{"Month":"2020-09-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1598918400000,"y":0},{"Month":"2020-10-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1601510400000,"y":0},{"Month":"2020-11-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1604188800000,"y":0},{"Month":"2020-12-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1606780800000,"y":0},{"Month":"2021-01-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1609459200000,"y":0},{"Month":"2021-02-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1612137600000,"y":0},{"Month":"2021-03-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1614556800000,"y":0},{"Month":"2021-04-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1617235200000,"y":0},{"Month":"2021-05-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1619827200000,"y":1},{"Month":"2021-06-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1622505600000,"y":0},{"Month":"2021-07-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1625097600000,"y":0},{"Month":"2021-08-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1627776000000,"y":0},{"Month":"2021-09-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1630454400000,"y":1},{"Month":"2021-10-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1633046400000,"y":0},{"Month":"2021-11-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1635724800000,"y":0},{"Month":"2021-12-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1638316800000,"y":0},{"Month":"2022-01-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1640995200000,"y":0},{"Month":"2022-02-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1643673600000,"y":0},{"Month":"2022-03-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1646092800000,"y":1},{"Month":"2022-04-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1648771200000,"y":0},{"Month":"2022-05-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1651363200000,"y":0},{"Month":"2022-06-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1654041600000,"y":1},{"Month":"2022-07-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1656633600000,"y":1},{"Month":"2022-08-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1659312000000,"y":0},{"Month":"2022-09-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1661990400000,"y":0},{"Month":"2022-10-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1664582400000,"y":0},{"Month":"2022-11-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1667260800000,"y":0},{"Month":"2022-12-01","Race/Ethnicity":"Pacific Islander","Number of People":5,"x":1669852800000,"y":5},{"Month":"2023-01-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1672531200000,"y":0},{"Month":"2023-02-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1675209600000,"y":0},{"Month":"2023-03-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1677628800000,"y":0},{"Month":"2023-04-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1680307200000,"y":0},{"Month":"2023-05-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1682899200000,"y":0},{"Month":"2023-06-01","Race/Ethnicity":"Pacific Islander","Number of People":1,"x":1685577600000,"y":1},{"Month":"2023-07-01","Race/Ethnicity":"Pacific Islander","Number of People":0,"x":1688169600000,"y":0}],"type":"column","color":"#FFEB2A"}],"xAxis":{"type":"datetime","title":{"text":"Month"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":",","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="annual-moveins-by-program-type" class="level2">
+<h2 class="anchored" data-anchor-id="annual-moveins-by-program-type"><strong>People Housed Annually by Program Type</strong></h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8c7cca1341a6b5f6f720" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-8c7cca1341a6b5f6f720">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Count"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"column":{"stacking":"normal"}},"series":[{"name":"Minimal Housing Assistance","data":[{"ProjectTypeLabel":"Minimal Housing Assistance","Count":419,"Year":2017,"Total":1316,"x":2017,"y":419},{"ProjectTypeLabel":"Minimal Housing Assistance","Count":614,"Year":2018,"Total":1666,"x":2018,"y":614},{"ProjectTypeLabel":"Minimal Housing Assistance","Count":646,"Year":2019,"Total":1740,"x":2019,"y":646},{"ProjectTypeLabel":"Minimal Housing Assistance","Count":685,"Year":2020,"Total":1879,"x":2020,"y":685},{"ProjectTypeLabel":"Minimal Housing Assistance","Count":536,"Year":2021,"Total":1733,"x":2021,"y":536},{"ProjectTypeLabel":"Minimal Housing Assistance","Count":813,"Year":2022,"Total":1949,"x":2022,"y":813}],"type":"column","color":"#FFEB2A"},{"name":"Permanent Supportive Housing","data":[{"ProjectTypeLabel":"Permanent Supportive Housing","Count":223,"Year":2017,"Total":1316,"x":2017,"y":223},{"ProjectTypeLabel":"Permanent Supportive Housing","Count":198,"Year":2018,"Total":1666,"x":2018,"y":198},{"ProjectTypeLabel":"Permanent Supportive Housing","Count":173,"Year":2019,"Total":1740,"x":2019,"y":173},{"ProjectTypeLabel":"Permanent Supportive Housing","Count":187,"Year":2020,"Total":1879,"x":2020,"y":187},{"ProjectTypeLabel":"Permanent Supportive Housing","Count":181,"Year":2021,"Total":1733,"x":2021,"y":181},{"ProjectTypeLabel":"Permanent Supportive Housing","Count":247,"Year":2022,"Total":1949,"x":2022,"y":247}],"type":"column","color":"#710193"},{"name":"Rapid Re-Housing","data":[{"ProjectTypeLabel":"Rapid Re-Housing","Count":674,"Year":2017,"Total":1316,"x":2017,"y":674},{"ProjectTypeLabel":"Rapid Re-Housing","Count":854,"Year":2018,"Total":1666,"x":2018,"y":854},{"ProjectTypeLabel":"Rapid Re-Housing","Count":921,"Year":2019,"Total":1740,"x":2019,"y":921},{"ProjectTypeLabel":"Rapid Re-Housing","Count":1007,"Year":2020,"Total":1879,"x":2020,"y":1007},{"ProjectTypeLabel":"Rapid Re-Housing","Count":1016,"Year":2021,"Total":1733,"x":2021,"y":1016},{"ProjectTypeLabel":"Rapid Re-Housing","Count":889,"Year":2022,"Total":1949,"x":2022,"y":889}],"type":"column","color":"#FF160C"}],"xAxis":{"type":"linear","title":{"text":"Year"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":",","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><br>
+</p>
+</section>
+<section id="previous-year-moveins-by-race-ethnicity" class="level2">
+<h2 class="anchored" data-anchor-id="previous-year-moveins-by-race-ethnicity"><strong>People Housed in 2022 by Race/Ethnicity</strong></h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d05fff97bdb173795493" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d05fff97bdb173795493">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":null},"yAxis":{"title":{"text":"Number of People"},"type":"linear","max":800},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Race/Ethnicity":"American Indian","Number of People":16,"y":16,"name":"American Indian"},{"Race/Ethnicity":"Asian","Number of People":3,"y":3,"name":"Asian"},{"Race/Ethnicity":"Black (Non-Hispanic)","Number of People":761,"y":761,"name":"Black (Non-Hispanic)"},{"Race/Ethnicity":"Data not collected","Number of People":3,"y":3,"name":"Data not collected"},{"Race/Ethnicity":"Hispanic/Latino","Number of People":652,"y":652,"name":"Hispanic/Latino"},{"Race/Ethnicity":"Pacific Islander","Number of People":9,"y":9,"name":"Pacific Islander"},{"Race/Ethnicity":"Two or more races","Number of People":79,"y":79,"name":"Two or more races"},{"Race/Ethnicity":"White (Non-Hispanic)","Number of People":426,"y":426,"name":"White (Non-Hispanic)"}],"type":"column","color":"#072A6C"}],"xAxis":{"type":"category","title":{"text":"Race/Ethnicity"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":",","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<div id="fsButtonForToc">
+<section id="toggle-focus-mode" class="level2">
+<h2 class="anchored" data-anchor-id="toggle-focus-mode"><button class="echobtn2" id="fullscreenbutton" onclick="toggleFullscreen(); return false">Toggle Focus Mode &nbsp; <i class="bi bi-arrows-fullscreen"></i></button></h2>
+<script src="../scripts/echo.js"></script>
+</section>
+</div>
+<hr>
+<div>
+<p><span style="float: left"><a href="../sections/system-capacity.html"><strong>Previous:</strong></a> <em>System Capacity</em></span> <span style="float: right"><a href="../sections/people.html"><strong>Next:</strong></a> <em>People</em></span></p>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
