@@ -1,12 +1,11 @@
 /* css styles */
 
-/*
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 * {
     font-family: 'Public Sans';
 }
-*/
+
 
 /*
 .button
@@ -46,4 +45,8 @@
 
 .notDisplayedOnPage {
   display: none;
+}
+
+.quarto-dashboard .bslib-value-box .value-box-value {
+    font-size: clamp(.1em, 8cqw, 3em);
 }

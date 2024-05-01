@@ -1,10 +1,73 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Homelessness Response System Dashboard",
+    "objectID": "sections/toc.html",
+    "href": "sections/toc.html",
+    "title": "Table of Contents:",
     "section": "",
-    "text": "Updated November 2023\nThis dashboard allows users to explore the Homelessness Response System (HRS) data by viewing and interacting with the content in each section to gain a deeper understanding of the current and historical trends in Austin & Travis County homelessness data. The data sources for the dashboard are:\n\nExports from the Homeless Management Information System (HMIS), a database that service providers use to record data collected when providing services to people experiencing homelessness.\nCapacity updates that programs submit to ECHO on an annual and a quarterly basis.\nThe annual Homeless Inventory Count (HIC).\n\nThe dashboard contains data on key performance measures and system flow through the pathways clients take from homelessness to housing. Metrics included in the Dashboard can help answer the following kinds of questions:\n\nWhat is the current capacity of the system and how has that changed over time?\nHow many people are moving into Rapid Re-Housing and Permanent Supportive Housing per month and how has that changed over time?\nHow many people are estimated to be experiencing unsheltered and sheltered homelessness at points in time?\nWhat kinds of programs are people enrolling in?\nHow do all the above metrics differ by race/ethnicity and household type?\n\nThe dashboard is updated monthly. Answers to the above questions can be used to track progress, understand pain points, set continuous improvement goals, and secure additional resources for the HRS.\n\n\nNot sure where to start? Click here for an intro to navigating the dashboard."
+    "text": "How to Navigate the Dashboard\nThis is the quick navigation page. You may return here at any time by clicking the “Table of Contents” label in the navigation bar at the top of each page.\nThe top navigation bar is always visible. In addition to returning to this table of contents, you can go to any of the main sections of the dashboard (such as “System Capacity”) by clicking there. The top navigation bar also contains:\n\nECHO’s social media links under the “thumb’s up” icon toward the right (click the icon to expand the menu).\nLinks to the FAQ, Data Requests, and Media Requests sections of the ECHO website under the “envelope” icon toward the right (click the icon to expand the menu).\nA search box feature that allows you to search for specific content anywhere in the dashboard. Click the magnifying glass icon to open the search box.\n\nThis quick navigation page also has an expandable navigation bar on the left-hand side of the page that shows the more detailed contents of each of the sections. Clicking “System Capacity” in this left-hand sidebar will expand the System Capacity contents to let you see what’s on that page, and you can click on a specific element (such as the Organization Capacity Chart) to go directly there.\nThe left-hand navigation bar will not be present on the dashboard sections. Instead you will see an “On This Page” box on the right side of the page that shows you the contents of that specific section. It will highlight the subsection you’re in, and you can click on other subsections to jump directly there. The “On this Page” box will have a “Toggle Focus Mode” button like the blue and yellow button below, which will take that page into fullscreen mode while you’re viewing it.\n\nAt the bottom right of this page you can see there is a forward link that will take you to the next section (“System Capacity”). As you move through the sections of the dashboard you will be able to move forward and back a section at a time with these back/forward navigation links at the bottom left/right of each section.\n\n\n\nToggle Focus Mode   \n\n\n\n\n\n\n\n\n\nNext: System Capacity"
+  },
+  {
+    "objectID": "sections/system-capacity.html#sys-capacity-intervention-chart",
+    "href": "sections/system-capacity.html#sys-capacity-intervention-chart",
+    "title": "Homelessness Response System Capacity",
+    "section": "System Capacity By Intervention By Year",
+    "text": "System Capacity By Intervention By Year"
+  },
+  {
+    "objectID": "sections/system-capacity.html#org-capacity-chart",
+    "href": "sections/system-capacity.html#org-capacity-chart",
+    "title": "Homelessness Response System Capacity",
+    "section": "Organization Capacity By Year",
+    "text": "Organization Capacity By Year\n\n\n\n\n\n\nNote: Prior to 2021, BSS+ capacity was all counted under Caritas of Austin in their role as the lead BSS+ funding recipient and coordinating agency. Beginning in 2021, BSS+ capacity started being counted under the individual BSS+ participating subrecipient agencies. This shows up as a decrease in Caritas capacity and an increase in other BSS+ participant capacities."
+  },
+  {
+    "objectID": "sections/system-capacity.html#org-capacity-details",
+    "href": "sections/system-capacity.html#org-capacity-details",
+    "title": "Homelessness Response System Capacity",
+    "section": "Interactive Capacity Details",
+    "text": "Interactive Capacity Details"
+  },
+  {
+    "objectID": "sections/system-capacity.html#toggle-focus-mode",
+    "href": "sections/system-capacity.html#toggle-focus-mode",
+    "title": "Homelessness Response System Capacity",
+    "section": "Toggle Focus Mode   ",
+    "text": "Toggle Focus Mode"
+  },
+  {
+    "objectID": "sections/move-ins.html#moveins-by-program-type",
+    "href": "sections/move-ins.html#moveins-by-program-type",
+    "title": "Move-In Charts & Details",
+    "section": "Permanent Housing Move-Ins by Program Type",
+    "text": "Permanent Housing Move-Ins by Program Type\n\n… Time Series… Clickable"
+  },
+  {
+    "objectID": "sections/move-ins.html#moveins-by-race-ethnicity",
+    "href": "sections/move-ins.html#moveins-by-race-ethnicity",
+    "title": "Move-In Charts & Details",
+    "section": "Permanent Housing Move-Ins by Race/Ethnicity",
+    "text": "Permanent Housing Move-Ins by Race/Ethnicity\n\n… Time Series… Clickable"
+  },
+  {
+    "objectID": "sections/move-ins.html#previous-year-moveins-by-race-ethnicity",
+    "href": "sections/move-ins.html#previous-year-moveins-by-race-ethnicity",
+    "title": "Move-In Charts & Details",
+    "section": "People Housed in 2023 by Race/Ethnicity",
+    "text": "People Housed in 2023 by Race/Ethnicity"
+  },
+  {
+    "objectID": "sections/move-ins.html#previous-year-moveins-by-project",
+    "href": "sections/move-ins.html#previous-year-moveins-by-project",
+    "title": "Move-In Charts & Details",
+    "section": "People Moving Into Permanent Housing in 2023, By Project and Type",
+    "text": "People Moving Into Permanent Housing in 2023, By Project and Type\n\n… People Moving Into PH Programs… People Exiting MHA Programs to Permanent Housing"
+  },
+  {
+    "objectID": "sections/move-ins.html#toggle-focus-mode",
+    "href": "sections/move-ins.html#toggle-focus-mode",
+    "title": "Move-In Charts & Details",
+    "section": "Toggle Focus Mode   ",
+    "text": "Toggle Focus Mode"
   },
   {
     "objectID": "sections/entries-returns.html",
@@ -25,7 +88,7 @@
     "href": "sections/entries-returns.html#returns",
     "title": "Entries & Returns",
     "section": "Returns to Homelessness",
-    "text": "Returns to Homelessness\nThis set of charts shows system trends for Returns to Homelessness, following the HUD definition of any time a client returns to the system within 2 years of exiting a project, from one of the project types to the right, to a Permanent Housing destination. In order to allow for the full window of time for a return to occur, this tab contains returns for clients who exited projects to Permanent Housing destinations from October 01, 2020 - October 01, 2021, with a return window of October 01, 2020 - October 01, 2023.\n\n… by Project Type… by Race/Ethnicity… by Age Group"
+    "text": "Returns to Homelessness\nThis set of charts shows system trends for Returns to Homelessness, following the HUD definition of any time a client returns to the system within 2 years of exiting a project, from one of the project types to the right, to a Permanent Housing destination. In order to allow for the full window of time for a return to occur, this tab contains returns for clients who exited projects to Permanent Housing destinations from February 01, 2021 - February 01, 2022, with a return window of February 01, 2021 - February 01, 2024.\n\n… by Project Type… by Race/Ethnicity… by Age Group"
   },
   {
     "objectID": "sections/entries-returns.html#toggle-focus-mode",
@@ -33,6 +96,13 @@
     "title": "Entries & Returns",
     "section": "Toggle Focus Mode   ",
     "text": "Toggle Focus Mode"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Homelessness Response System Dashboard",
+    "section": "",
+    "text": "Updated May 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis dashboard allows users to explore the Homelessness Response System (HRS) data by viewing and interacting with the content in each section to gain a deeper understanding of the current and historical trends in Austin & Travis County homelessness data. The data sources for the dashboard are:\n\nExports from the Homeless Management Information System (HMIS), a database that service providers use to record data collected when providing services to people experiencing homelessness.\nCapacity updates that programs submit to ECHO on an annual and a quarterly basis.\nThe annual Homeless Inventory Count (HIC).\n\nThe dashboard contains data on key performance measures and system flow through the pathways clients take from homelessness to housing. Metrics included in the Dashboard can help answer the following kinds of questions:\n\nWhat is the current capacity of the system and how has that changed over time?\nHow many people are moving into Rapid Re-Housing and Permanent Supportive Housing per month and how has that changed over time?\nHow many people are estimated to be experiencing unsheltered and sheltered homelessness at points in time?\nWhat kinds of programs are people enrolling in?\nHow do all the above metrics differ by race/ethnicity and household type?\n\nThe dashboard is updated monthly. Answers to the above questions can be used to track progress, understand pain points, set continuous improvement goals, and secure additional resources for the HRS.\n\n\nNot sure where to start? Click here for an intro to navigating the dashboard."
   },
   {
     "objectID": "sections/more-info.html",
@@ -63,102 +133,25 @@
     "text": "Toggle Focus Mode"
   },
   {
-    "objectID": "sections/move-ins.html#moveins-by-race-ethnicity",
-    "href": "sections/move-ins.html#moveins-by-race-ethnicity",
-    "title": "Move-In Charts & Details",
-    "section": "Permanent Housing Move-Ins by Race/Ethnicity",
-    "text": "Permanent Housing Move-Ins by Race/Ethnicity"
-  },
-  {
-    "objectID": "sections/move-ins.html#annual-moveins-by-program-type",
-    "href": "sections/move-ins.html#annual-moveins-by-program-type",
-    "title": "Move-In Charts & Details",
-    "section": "People Housed Annually by Program Type",
-    "text": "People Housed Annually by Program Type"
-  },
-  {
-    "objectID": "sections/move-ins.html#previous-year-moveins-by-race-ethnicity",
-    "href": "sections/move-ins.html#previous-year-moveins-by-race-ethnicity",
-    "title": "Move-In Charts & Details",
-    "section": "People Housed in 2022 by Race/Ethnicity",
-    "text": "People Housed in 2022 by Race/Ethnicity"
-  },
-  {
-    "objectID": "sections/move-ins.html#toggle-focus-mode",
-    "href": "sections/move-ins.html#toggle-focus-mode",
-    "title": "Move-In Charts & Details",
-    "section": "Toggle Focus Mode   ",
-    "text": "Toggle Focus Mode"
-  },
-  {
-    "objectID": "sections/people.html",
-    "href": "sections/people.html",
-    "title": "People Experiencing Homelessness: Snapshots",
-    "section": "",
-    "text": "The unsheltered homelessness estimates are one day approximations of the number of people likely to be experiencing unsheltered homelessness each month. This estimate comes from the Coordinated Entry by-name list (BNL) from HMIS at approximately the start of each month. For a more detailed description of the methodology used to estimate one day approximations of unsheltered homelessness in Austin / Travis County, which we use in this dashboard, please refer to the 2021 HMIS Snapshot report.\nBecause this estimate relies on Coordinated Assessment data, the more access to Coordinated Assessments (CAs), and the more CAs that are completed, the better we are able to estimate the number of people experiencing unsheltered homelessness. The launch of the Austin Street Outreach Collaborative (ASOC) in May 2022 brought with it an increased number of street outreach projects and coordinated assessors. The average number of CAs completed from January 2022 through April 2022 was 370, while the average number of CAs completed from May 2022 through September 2022 was 565, an average increase of about 195 CAs each month.\nThis is important because any apparent rise in the unsheltered population may or may not represent a dramatic increase in the actual number of total people living unsheltered, since it may be due to an increase in our ability to estimate the total number of people who were already living unsheltered considering that we now have more data collected and available through the Coordinated Entry System. Conversely any apparent future decreases could be influenced by changes in the capacity of the system to administer CAs or it could be influenced by fewer of the total people experiencing homelessness at a given time choosing to complete a CA.\nAs with the information about the new ASOC program above, the text in this section will continue to provide relevant details and updates to assist the community in interpreting the estimate as best as possible.\n\n\n\n… Total… by Race/Ethnicity… by Age Group… by Household Type"
-  },
-  {
-    "objectID": "sections/people.html#unsheltered-snapshots",
-    "href": "sections/people.html#unsheltered-snapshots",
-    "title": "People Experiencing Homelessness: Snapshots",
-    "section": "",
-    "text": "The unsheltered homelessness estimates are one day approximations of the number of people likely to be experiencing unsheltered homelessness each month. This estimate comes from the Coordinated Entry by-name list (BNL) from HMIS at approximately the start of each month. For a more detailed description of the methodology used to estimate one day approximations of unsheltered homelessness in Austin / Travis County, which we use in this dashboard, please refer to the 2021 HMIS Snapshot report.\nBecause this estimate relies on Coordinated Assessment data, the more access to Coordinated Assessments (CAs), and the more CAs that are completed, the better we are able to estimate the number of people experiencing unsheltered homelessness. The launch of the Austin Street Outreach Collaborative (ASOC) in May 2022 brought with it an increased number of street outreach projects and coordinated assessors. The average number of CAs completed from January 2022 through April 2022 was 370, while the average number of CAs completed from May 2022 through September 2022 was 565, an average increase of about 195 CAs each month.\nThis is important because any apparent rise in the unsheltered population may or may not represent a dramatic increase in the actual number of total people living unsheltered, since it may be due to an increase in our ability to estimate the total number of people who were already living unsheltered considering that we now have more data collected and available through the Coordinated Entry System. Conversely any apparent future decreases could be influenced by changes in the capacity of the system to administer CAs or it could be influenced by fewer of the total people experiencing homelessness at a given time choosing to complete a CA.\nAs with the information about the new ASOC program above, the text in this section will continue to provide relevant details and updates to assist the community in interpreting the estimate as best as possible.\n\n\n\n… Total… by Race/Ethnicity… by Age Group… by Household Type"
-  },
-  {
-    "objectID": "sections/people.html#sheltered-snapshots",
-    "href": "sections/people.html#sheltered-snapshots",
-    "title": "People Experiencing Homelessness: Snapshots",
-    "section": "Sheltered People Experiencing Homelessness",
-    "text": "Sheltered People Experiencing Homelessness\nThe sheltered homelessness estimates are one day approximations of the number of people enrolled in emergency shelter, transitional housing, or safe haven projects at approximately the start of each month, as recorded in HMIS.\nTo see snapshots of homelessness by race and ethnicity, age group, and household type, click on the legend items in the plots. Refresh your browser to return to the full plot or to restart filtering.\nNote: These numbers are extracted from HMIS and do not include victim service provider shelters run by agencies like SAFE because these agencies utilize alternative databases in order to preserve the privacy and safety of their clients. The “Capacity” tab of this Dashboard contains self-reported numbers from these agencies that we receive periodically.\n\nEstimated Number of People Experiencing Sheltered Homelessness\n\n… Total… by Race/Ethnicity… by Age Group… by Household Type"
-  },
-  {
-    "objectID": "sections/people.html#toggle-focus-mode",
-    "href": "sections/people.html#toggle-focus-mode",
-    "title": "People Experiencing Homelessness: Snapshots",
-    "section": "Toggle Focus Mode   ",
-    "text": "Toggle Focus Mode"
-  },
-  {
-    "objectID": "sections/system-capacity.html#org-capacity-chart",
-    "href": "sections/system-capacity.html#org-capacity-chart",
-    "title": "Homelessness Response System Capacity",
-    "section": "Organization Capacity By Year",
-    "text": "Organization Capacity By Year\n\n\n\n\n\n\nNote: Prior to 2021, BSS+ capacity was all counted under Caritas of Austin in their role as the lead BSS+ funding recipient and coordinating agency. Beginning in 2021, BSS+ capacity started being counted under the individual BSS+ participating subrecipient agencies. This shows up as a decrease in Caritas capacity and an increase in other BSS+ participant capacities."
-  },
-  {
-    "objectID": "sections/system-capacity.html#org-capacity-details",
-    "href": "sections/system-capacity.html#org-capacity-details",
-    "title": "Homelessness Response System Capacity",
-    "section": "Interactive Capacity Details",
-    "text": "Interactive Capacity Details"
-  },
-  {
-    "objectID": "sections/system-capacity.html#toggle-focus-mode",
-    "href": "sections/system-capacity.html#toggle-focus-mode",
-    "title": "Homelessness Response System Capacity",
-    "section": "Toggle Focus Mode   ",
-    "text": "Toggle Focus Mode"
-  },
-  {
     "objectID": "sections/system-flow.html",
     "href": "sections/system-flow.html",
     "title": "System Flow",
     "section": "",
-    "text": "The set of figures below show measures on how many people go through Coordinated Entry (CE) and how long people take to go through the CE process for each measurement during a given month. All time measures reported are median (the 50th percentile) number of days rather than averages, to account for outliers that would otherwise skew averages.\nFor more information on all these measures, see the More Info page.\n\n\n\n… System Flow Time… People Moving Through"
+    "text": "The set of figures below show measures on how many people go through Coordinated Entry (CE) and how long people take to go through the CE process for each measurement during a given month. All time measures reported are median (the 50th percentile) number of days rather than averages, to account for outliers that would otherwise skew averages.\nFor more information on all these measures, see the More Info page.\n\n\n\n… People Moving Through… System Flow Time"
   },
   {
     "objectID": "sections/system-flow.html#overview",
     "href": "sections/system-flow.html#overview",
     "title": "System Flow",
     "section": "",
-    "text": "The set of figures below show measures on how many people go through Coordinated Entry (CE) and how long people take to go through the CE process for each measurement during a given month. All time measures reported are median (the 50th percentile) number of days rather than averages, to account for outliers that would otherwise skew averages.\nFor more information on all these measures, see the More Info page.\n\n\n\n… System Flow Time… People Moving Through"
+    "text": "The set of figures below show measures on how many people go through Coordinated Entry (CE) and how long people take to go through the CE process for each measurement during a given month. All time measures reported are median (the 50th percentile) number of days rather than averages, to account for outliers that would otherwise skew averages.\nFor more information on all these measures, see the More Info page.\n\n\n\n… People Moving Through… System Flow Time"
   },
   {
     "objectID": "sections/system-flow.html#details",
     "href": "sections/system-flow.html#details",
     "title": "System Flow",
     "section": "Coordinated Entry Flow Details",
-    "text": "Coordinated Entry Flow Details\nThe following figures show how long people take to go through the CE process, broken down by race/ethnicity, household type, age group, and project type. All time measures reported are median (the 50th percentile) number of days rather than averages, to account for outliers that would otherwise skew averages.\nFor the race/ethnicity plots, we only include numbers for Black, non-Hispanic White, and Hispanic/Latino clients, because the numbers for other race/ethnicity groups (often fewer than 10 per month) are too low and possibly misleading.\nFor more information on all these measures, see the More Info page.\n\nDays from CA to Referral\n\n… By Project Type… By Race/Ethnicity… By Household Type… By Age Group\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDays from Referral to Project Enrollment\n\n… By Project Type… By Race/Ethnicity… By Household Type… By Age Group\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDays from Project Enrollment to Move-In\n\n… By Project Type… By Race/Ethnicity… By Household Type… By Age Group"
+    "text": "Coordinated Entry Flow Details\nThe following figures show how long people take to go through the CE process, broken down by race/ethnicity, household type, age group, and project type. All time measures reported are median (the 50th percentile) number of days rather than averages, to account for outliers that would otherwise skew averages.\nFor the race/ethnicity plots, we only include numbers for Black, non-Hispanic White, and Hispanic/Latino clients, because the numbers for other race/ethnicity groups (often fewer than 10 per month) are too low and possibly misleading.\nFor more information on all these measures, see the More Info page.\n\nDays from CA to Referral\n\n… By Project Type… By Race/Ethnicity… By Household Type… By Age Group\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDays from Referral to Project Enrollment\n\n… By Project Type… By Race/Ethnicity… By Household Type… By Age Group\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDays from Project Enrollment to Move-In\n\n… By Project Type… By Race/Ethnicity… By Household Type… By Age Group"
   },
   {
     "objectID": "sections/system-flow.html#toggle-focus-mode",
@@ -166,12 +159,5 @@
     "title": "System Flow",
     "section": "Toggle Focus Mode    ",
     "text": "Toggle Focus Mode"
-  },
-  {
-    "objectID": "sections/toc.html",
-    "href": "sections/toc.html",
-    "title": "Table of Contents:",
-    "section": "",
-    "text": "How to Navigate the Dashboard\nThis is the quick navigation page. You may return here at any time by clicking the “Table of Contents” label in the navigation bar at the top of each page.\nThe top navigation bar is always visible. In addition to returning to this table of contents, you can go to any of the main sections of the dashboard (such as “System Capacity”) by clicking there. The top navigation bar also contains:\n\nECHO’s social media links under the “thumb’s up” icon toward the right (click the icon to expand the menu).\nLinks to the FAQ, Data Requests, and Media Requests sections of the ECHO website under the “envelope” icon toward the right (click the icon to expand the menu).\nA search box feature that allows you to search for specific content anywhere in the dashboard. Click the magnifying glass icon to open the search box.\n\nThis quick navigation page also has an expandable navigation bar on the left-hand side of the page that shows the more detailed contents of each of the sections. Clicking “System Capacity” in this left-hand sidebar will expand the System Capacity contents to let you see what’s on that page, and you can click on a specific element (such as the Organization Capacity Chart) to go directly there.\nThe left-hand navigation bar will not be present on the dashboard sections. Instead you will see an “On This Page” box on the right side of the page that shows you the contents of that specific section. It will highlight the subsection you’re in, and you can click on other subsections to jump directly there. The “On this Page” box will have a “Toggle Focus Mode” button like the blue and yellow button below, which will take that page into fullscreen mode while you’re viewing it.\n\nAt the bottom right of this page you can see there is a forward link that will take you to the next section (“System Capacity”). As you move through the sections of the dashboard you will be able to move forward and back a section at a time with these back/forward navigation links at the bottom left/right of each section.\n\n\n\nToggle Focus Mode   \n\n\n\n\n\n\n\n\n\nNext: System Capacity"
   }
 ]
