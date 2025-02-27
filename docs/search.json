@@ -52,15 +52,15 @@
     "objectID": "sections/move-ins.html#previous-year-moveins-by-race-ethnicity",
     "href": "sections/move-ins.html#previous-year-moveins-by-race-ethnicity",
     "title": "Move-In Charts & Details",
-    "section": "People Housed in 2023 by Race/Ethnicity",
-    "text": "People Housed in 2023 by Race/Ethnicity"
+    "section": "People Housed in 2024 by Race/Ethnicity",
+    "text": "People Housed in 2024 by Race/Ethnicity"
   },
   {
     "objectID": "sections/move-ins.html#previous-year-moveins-by-project",
     "href": "sections/move-ins.html#previous-year-moveins-by-project",
     "title": "Move-In Charts & Details",
-    "section": "People Moving Into Permanent Housing in 2023, By Project and Type",
-    "text": "People Moving Into Permanent Housing in 2023, By Project and Type\n\n… People Moving Into PH Programs… People Exiting MHA Programs to Permanent Housing"
+    "section": "People Moving Into Permanent Housing in 2024, By Project and Type",
+    "text": "People Moving Into Permanent Housing in 2024, By Project and Type\n\n… People Moving Into PH Programs… People Exiting MHA Programs to Permanent Housing"
   },
   {
     "objectID": "sections/move-ins.html#toggle-focus-mode",
@@ -88,7 +88,7 @@
     "href": "sections/entries-returns.html#returns",
     "title": "Entries & Returns",
     "section": "Returns to Homelessness",
-    "text": "Returns to Homelessness\nThis set of charts shows system trends for Returns to Homelessness, following the HUD definition of any time a client returns to the system within 2 years of exiting a project, from one of the project types to the right, to a Permanent Housing destination. In order to allow for the full window of time for a return to occur, this tab contains returns for clients who exited projects to Permanent Housing destinations from September 01, 2021 - September 01, 2022, with a return window of September 01, 2021 - September 01, 2024.\n\n\n\n\n\n\nNote\n\n\n\n\n\nReturns are measured by interventions designed to provide Permanent Housing (Rapid Re-Housing, Permanent Supportive Housing, Housing Only, and Housing with Services) compared to interventions that provide other supportive or crisis interventions services such as Outreach or Shelter.\n\n\n\n\n… by Project Type… by Race/Ethnicity… by Age Group"
+    "text": "Returns to Homelessness\nThis set of charts shows system trends for Returns to Homelessness, following the HUD definition of any time a client returns to the system within 2 years of exiting a project, from one of the project types to the right, to a Permanent Housing destination. In order to allow for the full window of time for a return to occur, this tab contains returns for clients who exited projects to Permanent Housing destinations from February 01, 2022 - February 01, 2023, with a return window of February 01, 2022 - February 01, 2025.\n\n\n\n\n\n\nNote\n\n\n\n\n\nReturns are measured by interventions designed to provide Permanent Housing (Rapid Re-Housing, Permanent Supportive Housing, Housing Only, and Housing with Services) compared to interventions that provide other supportive or crisis interventions services such as Outreach or Shelter.\n\n\n\n\n… by Project Type… by Race/Ethnicity… by Age Group"
   },
   {
     "objectID": "sections/entries-returns.html#toggle-focus-mode",
@@ -102,7 +102,7 @@
     "href": "index.html",
     "title": "Homelessness Response System Dashboard",
     "section": "",
-    "text": "Homelessness Response System Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLast Updated: October 2024\nData Effective: 09/01/2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis dashboard allows users to explore the Homelessness Response System (HRS) data by viewing and interacting with the content in each section to gain a deeper understanding of the current and historical trends in Austin & Travis County homelessness data. The data sources for the dashboard are:\n\nExports from the Homeless Management Information System (HMIS), a database that service providers use to record data collected when providing services to people experiencing homelessness.\nCapacity updates that programs submit to ECHO on an annual and a quarterly basis.\nThe annual Homeless Inventory Count (HIC).\n\nThe dashboard contains data on key performance measures and system flow through the pathways clients take from homelessness to housing. Metrics included in the Dashboard can help answer the following kinds of questions:\n\nWhat is the current capacity of the system and how has that changed over time?\nHow many people are moving into Rapid Re-Housing and Permanent Supportive Housing per month and how has that changed over time?\nHow many people are estimated to be experiencing unsheltered and sheltered homelessness at points in time?\nWhat kinds of programs are people enrolling in?\nHow do all the above metrics differ by race/ethnicity and household type?\n\nThe dashboard is updated monthly. Answers to the above questions can be used to track progress, understand pain points, set continuous improvement goals, and secure additional resources for the HRS.\n\n\nNot sure where to start? Click here for an intro to navigating the dashboard."
+    "text": "Homelessness Response System Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLast Updated: February 2025\nData Effective: 02/01/2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis dashboard allows users to explore the Homelessness Response System (HRS) data by viewing and interacting with the content in each section to gain a deeper understanding of the current and historical trends in Austin & Travis County homelessness data. The data sources for the dashboard are:\n\nExports from the Homeless Management Information System (HMIS), a database that service providers use to record data collected when providing services to people experiencing homelessness.\nCapacity updates that programs submit to ECHO on an annual and a quarterly basis.\nThe annual Homeless Inventory Count (HIC).\n\nThe dashboard contains data on key performance measures and system flow through the pathways clients take from homelessness to housing. Metrics included in the Dashboard can help answer the following kinds of questions:\n\nWhat is the current capacity of the system and how has that changed over time?\nHow many people are moving into Rapid Re-Housing and Permanent Supportive Housing per month and how has that changed over time?\nHow many people are estimated to be experiencing unsheltered and sheltered homelessness at points in time?\nWhat kinds of programs are people enrolling in?\nHow do all the above metrics differ by race/ethnicity and household type?\n\nThe dashboard is updated monthly. Answers to the above questions can be used to track progress, understand pain points, set continuous improvement goals, and secure additional resources for the HRS.\n\n\nNot sure where to start? Click here for an intro to navigating the dashboard."
   },
   {
     "objectID": "sections/more-info.html",
