@@ -50,3 +50,21 @@
 .quarto-dashboard .bslib-value-box .value-box-value {
     font-size: clamp(.1em, 8cqw, 3em);
 }
+
+.circle {
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    aspect-ratio:1/1;
+    width:100%;
+    max-width:240px;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    border-radius:9999px;
+    background-color:rgb(00 20 91);
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:bold;
+    color: #DAA520;
+}
