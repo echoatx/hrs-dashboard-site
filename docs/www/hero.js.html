@@ -1,0 +1,117 @@
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Ramaraja&display=swap');
+
+ .libre-caslon-text-regular {
+     font-family: "Libre Caslon Text", serif;
+     font-weight: 400;
+     font-style: normal;
+ }
+
+ .libre-caslon-text-bold {
+     font-family: "Libre Caslon Text", serif;
+     font-weight: 700;
+     font-style: normal;
+ }
+
+ .libre-caslon-text-regular-italic {
+     font-family: "Libre Caslon Text", serif;
+     font-weight: 400;
+     font-style: italic;
+ }
+ .egg-yolk-container {
+     height: 100%;
+     width: 100%;
+     position: relative;
+ }
+ .shape-text {
+     font-size: 18px;
+     text-align: center;
+     word-wrap: break-word;
+     max-width: 90%;
+     margin: 0;
+ }
+ .shape-number {
+     font-size: 48px;
+     text-align: center;
+     margin: 10px 0 0 0;
+     animation: breathe 6s ease-in-out infinite;
+ }
+ @keyframes bg-move {
+     0% { background-position: 0 50%; }
+     50% { background-position: 100% 50%; }
+     100% { background-position: 0 50%; }
+ }
+</style>
+<script>
+ // Helper function to generate random number between min and max
+ function getRandomInt(min, max) {
+     return Math.floor(Math.random() * (max - min + 1)) + min;
+ }
+
+ // Helper function to generate a single accessible gradient
+ function getAccessibleGradient() {
+     const color1 = '#C1D8FA';
+     const color2 = '#4C8BD7';
+     return { color1, color2 };
+ }
+
+ // Helper function to generate random border-radius values
+ function generateRandomBorderRadius() {
+     const topLeft = getRandomInt(30, 70);
+     const topRight = getRandomInt(30, 70);
+     const bottomRight = getRandomInt(30, 70);
+     const bottomLeft = getRandomInt(30, 70);
+     const topLeftSlash = getRandomInt(30, 70);
+     const topRightSlash = getRandomInt(30, 70);
+     const bottomRightSlash = getRandomInt(30, 70);
+     const bottomLeftSlash = getRandomInt(30, 70);
+     return `${topLeft}% ${topRight}% ${bottomRight}% ${bottomLeft}% / ${topLeftSlash}% ${topRightSlash}% ${bottomRightSlash}% ${bottomLeftSlash}%`;
+ }
+
+ // Helper function to generate random keyframes for border-radius
+ function generateRandomKeyframes(animationName) {
+     let keyframes = `@keyframes ${animationName} {`;
+     for (let i = 0; i <= 100; i += 10) {
+         keyframes += `${i}% { border-radius: ${generateRandomBorderRadius()}; }`;
+     }
+     keyframes += '}';
+     return keyframes;
+ }
+
+ function createMovingShape(eggYolkCallCount) {
+     // Use a single accessible gradient
+     const { color1, color2 } = getAccessibleGradient();
+     const angle = getRandomInt(0, 360); // Random angle for gradient direction
+
+     // Generate unique animation name for border-radius
+     const borderAnimationName = `border-move-shape-${eggYolkCallCount}`;
+
+     // Dynamically style this eggYolk
+     const thisEggYolkStyle = document.createElement('style');
+     thisEggYolkStyle.textContent = `
+                .moving_shape.shape-${eggYolkCallCount} {
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(${angle}deg, ${color1}, ${color2});
+                    background-size: 600%; /* Larger size for more distinct blending */
+                    color: #ffffff;
+                    color-interpolation: sRGB; /* Consistent color blending */
+                    animation: bg-move 30s linear infinite forwards,
+                              ${borderAnimationName} 15s linear infinite forwards;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    box-sizing: border-box;
+                }
+                ${generateRandomKeyframes(borderAnimationName)}
+                @keyframes breathe {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.05); }
+                    100% { transform: scale(1); }
+                }
+     `;
+     document.head.appendChild(thisEggYolkStyle);
+ }
+</script>

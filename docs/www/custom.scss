@@ -1,0 +1,86 @@
+/*-- scss:defaults --*/
+$primary: #f4b407 !default;
+$secondary: black !default;
+
+$font-family-sans-serif:  'Public-Sans', sans-serif !default;
+$font-family-monospace: 'Inconsolata', monospace !default;
+$link-color: #1c75bc;
+
+
+$toc-color: #00205b;
+$toc-active-border: #f4b407;
+$toc-inactive-border: #6d6e71;
+$navbar-hl: #f4b407;
+
+$popover-bg: #1c75bc;
+
+$body-bg: white;
+
+$dropdown-bg:                    white !default;
+$dropdown-link-color:            #00205b !default;
+$dropdown-link-hover-color:      #00205b !default;
+$dropdown-link-hover-bg:         #f4b407 !default;
+
+$highlight-color: #6d6e71;
+
+$body-color: black !default;
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  color: #00205b;
+}
+
+h1 {
+  font-family:  'Public-Sans', sans-serif !important;
+  font-weight: bold;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family:  'Public-Sans', sans-serif !important;
+  font-weight: normal !important;
+}
+
+p, li, ul {
+  font-family:  'Public-Sans', sans-serif !important;
+  color: black;
+}
+
+.nav-tabs,
+.nav-pills {
+  .nav-link {
+    
+    font-family:  'Public-Sans', sans-serif !important;
+    
+    color: #00205b;
+
+    &:hover {
+      background-color: #f4b407;
+    }
+
+    &.active {
+      color: #f4b407;
+      background-color: #00205b;
+      font-weight: bold;
+      &:hover {
+        color:#f4b407;
+      }
+    }
+  }
+}
+
+.navbar {
+  font-family:  'Public-Sans', sans-serif !important;
+  
+  &.bg-primary {
+    border: 1px solid white;
+  }
+
+  &.bg-dark {
+    background-color: white !important;
+    border: 1px solid $gray-700;
+  }
+
+  &.bg-light {
+    background-color: white !important;
+  }
+}

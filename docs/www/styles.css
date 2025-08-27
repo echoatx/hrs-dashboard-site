@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.sourceCode {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.echoFullscreenButton {
+  background-color: #00205b; /* Blue background */
+  border: none; /* Remove borders */
+  color: #DAA520;
+  padding: 12px 16px; /* Some padding */
+  cursor: pointer; /* Mouse pointer on hover */
+  border-radius: 15px;
+  moz-border-radius: 15px;
+  webkit-border-radius: 15px;
+}
+
+.quarto-dashboard .bslib-value-box .value-box-value {
+    font-size: clamp(.1em, 8cqw, 3em);
+}
