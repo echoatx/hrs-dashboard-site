@@ -19,16 +19,22 @@ These are all the environment variables that were active when this
 dashboard was rendered by [Quarto](https://quarto.org/).
 </summary>
 
-This document was prepared with Quarto CLI 1.7.33.
+This document was prepared with Quarto CLI 1.8.21.
 
-| VARIABLE | VALUE |
-|:---|:---|
-| DATE_BY_NAME_LIST | 2025-07-01 |
-| DATE_HMIS_EXTRACT | 2025-07-01 |
+    Warning: package 'knitr' was built under R version 4.4.3
+
+    Warning: package 'tibble' was built under R version 4.4.3
+
+    Warning: package 'dplyr' was built under R version 4.4.3
+
+| VARIABLE                 | VALUE      |
+|:-------------------------|:-----------|
+| DATE_BY_NAME_LIST        | 2025-07-01 |
+| DATE_HMIS_EXTRACT        | 2025-07-01 |
 | DATE_DASHBOARD_PUBLISHED | 2025-07-01 |
-| DASHBOARD_LOGGING_DIR | /home/bryce/src/echo/hrs-dashboard-project-artifacts/dashboard-csvs |
-| QUARTO_PROFILE |  |
-| QUARTO_CUSTOM_OUTPUT_DIR | NA |
+| DASHBOARD_LOGGING_DIR    | NA         |
+| QUARTO_PROFILE           |            |
+| QUARTO_CUSTOM_OUTPUT_DIR | NA         |
 
 Variables which might affect the rendering process, but which private
 values, are listed in this second table.
