@@ -11,19 +11,21 @@ stored transparently in this location, guaranteeing the values here are
 not out of sync with what (may have) affected the rendering process for
 the live website.
 
+<!-- https://quarto.org/docs/authoring/markdown-basics.html#raw-content -->
+<!-- Don't allow Quarto to process this HTML within Markdown. Direct Quarto to simply pass these lines to the GFM output directly. -->
 <details>
-<summary> These are all the environment variables that were active when this dashboard was rendered by <a href="https://quarto.org/">Quarto</a>.</summary>
+<summary>These are all the environment variables that were active when this dashboard was rendered by <a href="https://quarto.org/">Quarto</a>.</summary>
 
 This document was prepared with Quarto CLI 1.7.34.
 
-| VARIABLE | VALUE |
-|:---|:---|
-| DATE_BY_NAME_LIST | 2025-07-01 |
-| DATE_HMIS_EXTRACT | 2025-07-01 |
-| DATE_DASHBOARD_PUBLISHED | 2025-07-01 |
-| DASHBOARD_LOGGING_DIR | /home/bryce/src/echo/hrs-dashboard-project-artifacts/dashboard-csvs |
-| QUARTO_PROFILE |  |
-| QUARTO_CUSTOM_OUTPUT_DIR | NA |
+| VARIABLE                 | VALUE                                                               |
+|:-------------------------|:--------------------------------------------------------------------|
+| DATE_BY_NAME_LIST        | 2025-07-01                                                          |
+| DATE_HMIS_EXTRACT        | 2025-07-01                                                          |
+| DATE_DASHBOARD_PUBLISHED | 2025-07-01                                                          |
+| DASHBOARD_LOGGING_DIR    | /home/bryce/src/echo/hrs-dashboard-project-artifacts/dashboard-csvs |
+| QUARTO_PROFILE           |                                                                     |
+| QUARTO_CUSTOM_OUTPUT_DIR | NA                                                                  |
 
 Variables which might affect the rendering process, but which private
 values, are listed in this second table.
