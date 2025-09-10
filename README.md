@@ -12,12 +12,7 @@ not out of sync with what (may have) affected the rendering process for
 the live website.
 
 <details>
-
-<summary>
-
-These are all the environment variables that were active when this
-dashboard was rendered by [Quarto](https://quarto.org/).
-</summary>
+<summary> These are all the environment variables that were active when this dashboard was rendered by [Quarto](https://quarto.org/).</summary>
 
 This document was prepared with Quarto CLI 1.7.34.
 
@@ -38,4 +33,4 @@ values, are listed in this second table.
 | ECHO_SECRET_F | TRUE |
 | ECHO_SECRET_D | TRUE |
 
-<details>
+</details>
