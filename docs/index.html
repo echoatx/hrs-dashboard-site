@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.21">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,15 +32,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./www/graphics/echo-favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1a0f289eba219295af8e332987ca73c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-48eb228e18e417c5829f172d421f2f96.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bdf9e62c9349ba57bad88604b90547ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5581da6a76a9444235071739411fa79c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/bootstrap-icons-1.13.1/bootstrap-icons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -71,274 +70,140 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Primary Meta Tags -->
-
 <title>Homelessness Response System Dashboard</title>
-
 <meta name="title" content="HRS Dashboard | by ECHO">
-
 <meta name="description" content="This dashboard allows users to explore key Austin / Travis County Homelessness Response System (HRS) measures and metrics to gain a better understanding of the current and historical trends in local homelessness services data.">
 
-
-
 <!-- Open Graph / Facebook -->
-
 <meta property="og:type" content="website">
-
 <meta property="og:url" content="https://echoatx.github.io/hrs-dashboard-site/">
-
 <meta property="og:title" content="Homelessness Response System Dashboard – HRS Dashboard">
-
 <meta property="og:description" content="This dashboard allows users to explore key Austin / Travis County Homelessness Response System (HRS) measures and metrics to gain a better understanding of the current and historical trends in local homelessness services data.">
-
 <meta property="og:image" content="https://www.austinecho.org/wp-content/uploads/2023/12/preview.jpg">
 
-
-
 <!-- Twitter -->
-
 <meta property="twitter:card" content="summary_large_image">
-
 <meta property="twitter:url" content="https://echoatx.github.io/hrs-dashboard-site/">
-
 <meta property="twitter:title" content="HRS Dashboard | by ECHO">
-
 <meta property="twitter:description" content="This dashboard allows users to explore key Austin / Travis County Homelessness Response System (HRS) measures and metrics to gain a better understanding of the current and historical trends in local homelessness services data.">
-
 <meta property="twitter:image" content="https://www.austinecho.org/wp-content/uploads/2023/12/preview.jpg">
 <style>
-
  @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Ramaraja&display=swap');
 
-
-
  .libre-caslon-text-regular {
-
      font-family: "Libre Caslon Text", serif;
-
      font-weight: 400;
-
      font-style: normal;
-
  }
-
-
 
  .libre-caslon-text-bold {
-
      font-family: "Libre Caslon Text", serif;
-
      font-weight: 700;
-
      font-style: normal;
-
  }
-
-
 
  .libre-caslon-text-regular-italic {
-
      font-family: "Libre Caslon Text", serif;
-
      font-weight: 400;
-
      font-style: italic;
-
  }
-
  .egg-yolk-container {
-
      height: 100%;
-
      width: 100%;
-
      position: relative;
-
  }
-
  .shape-text {
-
      font-size: 18px;
-
      text-align: center;
-
      word-wrap: break-word;
-
      max-width: 90%;
-
      margin: 0;
-
  }
-
  .shape-number {
-
      font-size: 48px;
-
      text-align: center;
-
      margin: 10px 0 0 0;
-
      animation: breathe 6s ease-in-out infinite;
-
  }
-
  @keyframes bg-move {
-
      0% { background-position: 0 50%; }
-
      50% { background-position: 100% 50%; }
-
      100% { background-position: 0 50%; }
-
  }
-
 </style>
-
 <script>
-
  // Helper function to generate random number between min and max
-
  function getRandomInt(min, max) {
-
      return Math.floor(Math.random() * (max - min + 1)) + min;
-
  }
-
-
 
  // Helper function to generate a single accessible gradient
-
  function getAccessibleGradient() {
-
      const color1 = '#C1D8FA';
-
      const color2 = '#4C8BD7';
-
      return { color1, color2 };
-
  }
-
-
 
  // Helper function to generate random border-radius values
-
  function generateRandomBorderRadius() {
-
      const topLeft = getRandomInt(30, 70);
-
      const topRight = getRandomInt(30, 70);
-
      const bottomRight = getRandomInt(30, 70);
-
      const bottomLeft = getRandomInt(30, 70);
-
      const topLeftSlash = getRandomInt(30, 70);
-
      const topRightSlash = getRandomInt(30, 70);
-
      const bottomRightSlash = getRandomInt(30, 70);
-
      const bottomLeftSlash = getRandomInt(30, 70);
-
      return `${topLeft}% ${topRight}% ${bottomRight}% ${bottomLeft}% / ${topLeftSlash}% ${topRightSlash}% ${bottomRightSlash}% ${bottomLeftSlash}%`;
-
  }
-
-
 
  // Helper function to generate random keyframes for border-radius
-
  function generateRandomKeyframes(animationName) {
-
      let keyframes = `@keyframes ${animationName} {`;
-
      for (let i = 0; i <= 100; i += 10) {
-
          keyframes += `${i}% { border-radius: ${generateRandomBorderRadius()}; }`;
-
      }
-
      keyframes += '}';
-
      return keyframes;
-
  }
-
-
 
  function createMovingShape(eggYolkCallCount) {
-
      // Use a single accessible gradient
-
      const { color1, color2 } = getAccessibleGradient();
-
      const angle = getRandomInt(0, 360); // Random angle for gradient direction
 
-
-
      // Generate unique animation name for border-radius
-
      const borderAnimationName = `border-move-shape-${eggYolkCallCount}`;
 
-
-
      // Dynamically style this eggYolk
-
      const thisEggYolkStyle = document.createElement('style');
-
      thisEggYolkStyle.textContent = `
-
                 .moving_shape.shape-${eggYolkCallCount} {
-
                     width: 100%;
-
                     height: 100%;
-
                     background: linear-gradient(${angle}deg, ${color1}, ${color2});
-
                     background-size: 600%; /* Larger size for more distinct blending */
-
                     color: #ffffff;
-
                     color-interpolation: sRGB; /* Consistent color blending */
-
                     animation: bg-move 30s linear infinite forwards,
-
                               ${borderAnimationName} 15s linear infinite forwards;
-
                     display: flex;
-
                     flex-direction: column;
-
                     justify-content: center;
-
                     align-items: center;
-
                     padding: 20px;
-
                     box-sizing: border-box;
-
                 }
-
                 ${generateRandomKeyframes(borderAnimationName)}
-
                 @keyframes breathe {
-
                     0% { transform: scale(1); }
-
                     50% { transform: scale(1.05); }
-
                     100% { transform: scale(1); }
-
                 }
-
      `;
-
      document.head.appendChild(thisEggYolkStyle);
-
  }
-
 </script>
-
 
 
 <link rel="stylesheet" href="www/styles.css">
@@ -360,8 +225,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">HRS Dashboard</span>
     </a>
@@ -502,9 +365,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
-<p><i class="bi-calendar " style="" role="img" aria-hidden="true"></i> <strong><abbr title="This is the June (ad hoc; e.g.) 2025 dashboard.">Dashboard Month-Year</abbr>: June 2025</strong></p>
+<p><i class="bi-calendar " style="" role="img" aria-hidden="true"></i> <strong><abbr title="A dashboard's month-year (nomen suum), e.g. June 2025, denotes the recency of dashboard data in terms of the latest full month of data included.">Dashboard Month-Year</abbr>: June 2025</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -515,7 +378,7 @@ Note
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><i class="bi-calendar " style="" role="img" aria-hidden="true"></i> Publication Date: September 01 2025</p>
+<p><i class="bi-calendar " style="" role="img" aria-hidden="true"></i> Publication Date: September 10 2025</p>
 <p><i class="bi-calendar " style="" role="img" aria-hidden="true"></i> <a title="Defined on the More Info page." href="sections/more-info.html#definition-data-effective">Data Effective</a>: 07/01/2025 (MM/DD/YY)</p>
 </div>
 </div>
@@ -534,7 +397,7 @@ Note
 <div class="egg-yolk-container">
 <div class="moving_shape shape-2">
 <p class="shape-text libre-caslon-text-regular">Number of People Newly Housed In 2024</p>
-<p class="shape-number libre-caslon-text-bold">1,567</p>
+<p class="shape-number libre-caslon-text-bold">3,082</p>
 </div>
 </div>
 </div>
@@ -542,7 +405,7 @@ Note
 <div class="egg-yolk-container">
 <div class="moving_shape shape-3">
 <p class="shape-text libre-caslon-text-regular">People Likely Experiencing Unsheltered Homelessness [2025-01-02, 2025-07-01]</p>
-<p class="shape-number libre-caslon-text-bold">5,523</p>
+<p class="shape-number libre-caslon-text-bold">3,865</p>
 </div>
 </div>
 </div>
@@ -552,7 +415,7 @@ Note
 <div class="egg-yolk-container">
 <div class="moving_shape shape-4">
 <p class="shape-text libre-caslon-text-regular">People Likely Experiencing Sheltered Homelessness [2025-01-02, 2025-07-01]</p>
-<p class="shape-number libre-caslon-text-bold">1,315</p>
+<p class="shape-number libre-caslon-text-bold">1,070</p>
 </div>
 </div>
 </div>
@@ -568,7 +431,7 @@ Note
 <div class="egg-yolk-container">
 <div class="moving_shape shape-6">
 <p class="shape-text libre-caslon-text-regular">Number of People that took a Coordinated Assessment in the Past 12 Months</p>
-<p class="shape-number libre-caslon-text-bold">10,447</p>
+<p class="shape-number libre-caslon-text-bold">9,740</p>
 </div>
 </div>
 </div>
@@ -612,67 +475,36 @@ Tip
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script>
-
  function toggleFullscreen() {
-
      var element = document.documentElement;
-
-
 
      var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !== null) || (document.mozFullScreen || document.webkitIsFullScreen);
 
-
-
      if (isInFullScreen) {
-
          if (document.exitFullscreen) {
-
              document.exitFullscreen();
-
          } else if (document.webkitExitFullscreen) {
-
              document.webkitExitFullscreen();
-
          } else if (document.msExitFullscreen) {
-
              document.msExitFullscreen();
-
          }
-
      } else {
-
          if (element.requestFullscreen) {
-
              element.requestFullscreen();
-
          } else if (element.webkitRequestFullscreen) {
-
              element.webkitRequestFullscreen();
-
          } else if (element.msRequestFullscreen) {
-
              element.msRequestFullscreen();
-
          }
-
      }
-
      return false;
-
  }
-
-
 
  var div = document.getElementById('fsButtonForToc');
-
  if (!!div) {
-
      div.style.visibility = 'hidden';
-
  }
-
 </script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

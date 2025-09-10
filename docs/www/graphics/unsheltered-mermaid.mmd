@@ -1,0 +1,33 @@
+flowchart TD
+   H --> A
+   A --> E[Entry]
+   A --> C[Client]
+   A@{ shape: tri, label: " " }
+   E -->|ProjectID == 9339| dp(distinct PersonalID) -->|distinct project-9339 entries| U
+   C --> U
+
+   RB@{ shape: hourglass, label: "" }
+   CEBNL --> CAE
+   CAE -->|pshStaffing| RB
+   CAE -->|rrhStaffing| RB
+   CAE -->|pshPriority| RB
+   CAE -->|rrhPriority| RB
+   CAE@{shape: tri, label: " "}
+   RB -->|collatedPriorityListReferredList| U
+
+   CA -->|new_ca| N
+
+   N -->|two definitions| U
+
+   H0@{shape: cylinder, label: "HMIS"}
+
+   H0 -->|CSV Export| H
+
+   H@{ shape: bow-rect, label: "HMIS Extract" }
+   H2@{ shape: comment, label: "Clarity supports SQL queries, so HMIS CSV exports aren't wholly necessary in the future." } ~~~ H
+   U[unsheltered]
+   N("What clients are newly assessed?")
+   CA@{ shape: doc, label: "CA All Assessments"}
+
+   I(import_bnl) --> CEBNL
+   CEBNL@{ shape: bow-rect, label: "BNL Extract"}
